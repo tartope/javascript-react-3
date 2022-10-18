@@ -7,7 +7,7 @@ export const SalesPage = () => {
     let lemonadeCount = useRecoilValue(lemonadeCounter)
         
     return (
-        <div>
+        <div className = "SalesPage">
             SalesPage 
             <br />
             { lemonadeCount}

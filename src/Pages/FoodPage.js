@@ -3,6 +3,6 @@ import './FoodPage.scss'
 
 export const FoodPage = () => {
   return (
-    <div>FoodPage</div>
+    <div className = "FoodPage">FoodPage</div>
   )
 }

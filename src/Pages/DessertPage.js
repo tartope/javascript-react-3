@@ -3,6 +3,6 @@ import './DessertPage.scss'
 
 export const DessertPage = () => {
   return (
-    <div>DessertPage</div>
+    <div className='DessertPage'>DessertPage</div>
   )
 }

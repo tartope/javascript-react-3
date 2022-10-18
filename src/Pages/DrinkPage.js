@@ -12,7 +12,7 @@ export const DrinkPage = () => {
     }
 
     return (
-        <div>
+        <div className = "DrinkPage">
             <Button variant="primary" onClick={() => onHandleClick()}>Increment</Button>
             <br />
             Counter: {theLemondeCounter}
