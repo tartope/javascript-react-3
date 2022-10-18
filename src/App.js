@@ -41,10 +41,10 @@ function App() {
     <div className = "App">
         <div className = "App_header">
           <div>
-            <img className = "App_Hamburger" onClick={() => setShow(true)} src="hamburger.png" alt="menu"></img>
+            <img className = "App_hamburger" onClick={() => setShow(true)} src="hamburger.png" alt="menu"></img>
           </div>
-          <div>
-            <h2>Food Store</h2>
+          <div className = "App_logo">
+            Food Store
           </div>
         </div>
         <Offcanvas show={show} onHide={() => setShow(false)}>

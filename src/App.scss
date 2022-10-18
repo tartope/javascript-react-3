@@ -12,10 +12,13 @@
     display: flex;
     justify-content: space-between;
   }
-  
-  .App_Hamburger {
+  .App_hamburger {
     cursor: pointer;
     width: 40px;
+  }
+  .App_logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 200%;
   }
 }
 
