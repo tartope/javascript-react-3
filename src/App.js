@@ -37,6 +37,10 @@ function App() {
     setShow(false) // Close the sidebar.
   }
 
+  const onHandleCheckout = () => {
+    console.log("Checkout")
+  }
+
   return (
     <div className = "App">
         <div className = "App_header">
@@ -49,13 +53,23 @@ function App() {
         </div>
         <Offcanvas show={show} onHide={() => setShow(false)}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Menu</Offcanvas.Title>
+            <Offcanvas.Title>The Coffee Place Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Button variant="link" onClick={() => onHandleLink("Food")}>Food</Button><br />
             <Button variant="link" onClick={() => onHandleLink("Drink")}>Drink</Button><br />
             <Button variant="link" onClick={() => onHandleLink("Dessert")}>Dessert</Button><br />
             <Button variant="link" onClick={() => onHandleLink("Sales")}>Sales</Button><br />
+            <hr />
+            Your Order <br/>
+            
+            Item 1 <br/>
+            Item 2 <br/>
+            Item 3 <br/>
+            <hr />
+            Your Total: $0.00
+            <hr />
+            <Button variant="primary"  onClick={() => onHandleCheckout()}>Checkout</Button>
           </Offcanvas.Body>
         </Offcanvas>
         {
