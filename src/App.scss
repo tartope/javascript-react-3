@@ -21,6 +21,22 @@
     font-family: 'Dancing Script', cursive;
     font-size: 200%;
   }
+  .App_logo_area {
+    display: flex;
+  }
+  .App_qty {
+    color: white;
+    background-color: red;
+    position: relative;
+    left: -26px;
+    top: -3px;
+    padding-left: 5px;
+    font-size: smaller;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+  }
 }
 
 input {

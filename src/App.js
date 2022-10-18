@@ -42,13 +42,17 @@ function App() {
   }
 
   return (
-    <div className = "App">
-        <div className = "App_header">
+    <div className="App">
+        <div className="App_header">
           <div>
-            <img className = "App_hamburger" onClick={() => setShow(true)} src="hamburger.png" alt="menu"></img>
+            <img className="App_hamburger" onClick={() => setShow(true)} src="hamburger.png" alt="menu"></img>
           </div>
-          <div className = "App_logo">
-            The Coffee Place
+          <div className="App_logo_area">
+            <div className="App_logo">The Coffee Place</div>
+            <div>
+                <img width="40px" src="shopping-cart.png" alt="shopping cart"/>
+                <div className="App_qty">1</div>
+            </div>
           </div>
         </div>
         <Offcanvas show={show} onHide={() => setShow(false)}>
@@ -62,14 +66,14 @@ function App() {
             <Button variant="link" onClick={() => onHandleLink("Sales")}>Sales</Button><br />
             <hr />
             Your Order <br/>
-            
+
             Item 1 <br/>
             Item 2 <br/>
             Item 3 <br/>
             <hr />
             Your Total: $0.00
             <hr />
-            <Button variant="primary"  onClick={() => onHandleCheckout()}>Checkout</Button>
+            <Button variant="primary" onClick={() => onHandleCheckout()}>Checkout</Button>
           </Offcanvas.Body>
         </Offcanvas>
         {
