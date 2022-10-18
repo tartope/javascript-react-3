@@ -1,11 +1,13 @@
 import React, { useRef } from 'react'
 import { useRecoilState } from 'recoil'
 import { drinkData } from '../Util/Atoms'
+import * as AppConfig from '../Util/App.Config'
 import './DrinkPage.scss'
 
 export const DrinkPage = () => {
     const inputRef = useRef(null)
     let [theDrinkData, setTheDrinkData] = useRecoilState(drinkData)
+    const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
 
     const onHandleLemonadeChange = (qty) => {
         let drinkData = {...theDrinkData}
@@ -49,19 +51,19 @@ export const DrinkPage = () => {
                 <tbody>
                     <tr>
                         <td>Lemonade</td>
-                        <td>$1.00</td>
+                        <td>{ formatter.format(AppConfig.lemonadePrice) }</td>
                         <td>x</td>
                         <td><input value={theDrinkData.lemonade} ref={inputRef} onChange={(e) => onHandleLemonadeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                     </tr>
                     <tr>
                         <td>Tea</td>
-                        <td>$2.00</td>
+                        <td>{ formatter.format(AppConfig.teaPrice) }</td>
                         <td>x</td>
                         <td><input value={theDrinkData.tea} ref={inputRef} onChange={(e) => onHandleTeaChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                     </tr>
                     <tr>
                         <td>Coffee</td>
-                        <td>$3.00</td>
+                        <td>{ formatter.format(AppConfig.coffeePrice) }</td>
                         <td>x</td>
                         <td><input value={theDrinkData.coffee} ref={inputRef} onChange={(e) => onHandleCoffeeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                     </tr>
