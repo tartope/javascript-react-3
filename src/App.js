@@ -40,7 +40,12 @@ function App() {
   return (
     <div className = "App">
         <div className = "App_header">
-          <Button variant="primary" onClick={() => setShow(true)}>Menu</Button>
+          <div>
+            <Button variant="primary" onClick={() => setShow(true)}>Menu</Button>
+          </div>
+          <div>
+            <h2>Food Store</h2>
+          </div>
         </div>
         <Offcanvas show={show} onHide={() => setShow(false)}>
           <Offcanvas.Header closeButton>
