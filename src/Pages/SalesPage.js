@@ -10,7 +10,9 @@ export const SalesPage = () => {
         <div className = "SalesPage">
             SalesPage 
             <br />
-            {lemonadeCount.lemonade }
+            Lemonade: {lemonadeCount.lemonade }<br />
+            Tea: {lemonadeCount.tea }<br />
+            Coffee: {lemonadeCount.coffee }<br />
         </div>
     )
 }

@@ -8,15 +8,35 @@ export const DrinkPage = () => {
     let [theDrinkData, setTheDrinkData] = useRecoilState(drinkData)
 
     const onHandleLemonadeChange = (qty) => {
+        let drinkData = {...theDrinkData}
+        drinkData.lemonade = qty  
         if (qty) {
-            let d = {
-                lemonade: qty,
-                tea: 0,
-                coffee: 0
-            }
-            setTheDrinkData(d)
+            setTheDrinkData(drinkData)
         } else {
-            setTheDrinkData(0)
+            drinkData.lemonade = 0
+            setTheDrinkData(drinkData)
+        }
+    }
+
+    const onHandleTeaChange = (qty) => {
+        let drinkData = {...theDrinkData}
+        drinkData.tea = qty  
+        if (qty) {
+            setTheDrinkData(drinkData)
+        } else {
+            drinkData.tea = 0
+            setTheDrinkData(drinkData)
+        }
+    }
+
+    const onHandleCoffeeChange = (qty) => {
+        let drinkData = {...theDrinkData}
+        drinkData.coffee = qty  
+        if (qty) {
+            setTheDrinkData(drinkData)
+        } else {
+            drinkData.coffee = 0
+            setTheDrinkData(drinkData)
         }
     }
 
@@ -37,13 +57,13 @@ export const DrinkPage = () => {
                         <td>Tea</td>
                         <td>$2.00</td>
                         <td>x</td>
-                        <td>0</td>
+                        <td><input value={theDrinkData.tea} ref={inputRef} onChange={(e) => onHandleTeaChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                     </tr>
                     <tr>
                         <td>Coffee</td>
                         <td>$3.00</td>
                         <td>x</td>
-                        <td>0</td>
+                        <td><input value={theDrinkData.coffee} ref={inputRef} onChange={(e) => onHandleCoffeeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                     </tr>
                 </tbody>
             </table>

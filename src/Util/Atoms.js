@@ -9,7 +9,8 @@ import { atom } from 'recoil'
 
 //
 // Usage: 
-//
+//  DrinkPage (read/write)
+//  SalesPage (read)
 // Desc:
 //  
 export const drinkData = atom({
