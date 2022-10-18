@@ -1,12 +1,15 @@
-import './App.css';
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import './App.scss'
+import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button'
+import Offcanvas from 'react-bootstrap/Offcanvas'
+import { FoodPage } from './Pages/FoodPage';
+import { DrinkPage } from './Pages/DrinkPage';
+import { DessertPage } from './Pages/DessertPage';
 
 function App() {
   const [show, setShow] = useState(false);
-  let [showFood, setShowFood] = useState(true);
-  let [showDrink, setShowDrink] = useState(false);
+  let [showFood, setShowFood] = useState(false);
+  let [showDrink, setShowDrink] = useState(true);
   let [showDessert, setShowDessert] = useState(false);
 
   const onHandleLink = (page) => {
@@ -29,8 +32,10 @@ function App() {
   }
 
   return (
-    <div className="App">
-        <Button variant="primary" onClick={() => setShow(true)}>Show Sidebar</Button>
+    <div className = "App">
+        <div className = "header">
+          <Button variant="primary" onClick={() => setShow(true)}>Menu</Button>
+        </div>
         <br />
         <Offcanvas show={show} onHide={() => setShow(false)}>
           <Offcanvas.Header closeButton>
@@ -43,22 +48,13 @@ function App() {
           </Offcanvas.Body>
         </Offcanvas>
         {
-          showFood &&
-          <div>
-            Food
-          </div>
+          showFood && < FoodPage />
         }
         {
-          showDrink &&
-          <div>
-            Drink
-          </div>
+          showDrink && <DrinkPage />
         }
         {
-          showDessert &&
-          <div>
-            Dessert
-          </div>
+          showDessert && <DessertPage />
         }
     </div>
   );
