@@ -6,7 +6,6 @@
 //
 
 import { atom } from 'recoil'
-import * as AppConfig from '../Util/App.Config'
 
 //
 // Usage: 
