@@ -10,14 +10,26 @@
         font-size: 200%;
         font-family: 'Great Vibes', cursive;
     }
+    .DrinkPage_Content {
+        display: flex;
+        justify-content: center;
+    }
     .DrinkPage_Table {
-        border-radius: 5px;
-        background-color: lightGray;
+        min-width: 200px;
+        //border-radius: 5px;
+        background-color: rgb(185, 136, 95);
         tr {
+            border: 1px solid rgb(212, 195, 195);
             td {
-                padding: 5px
+                padding: 7px
             }
         }
+        margin: 10px;
+        width: 250px
+    }
+    .DrinkPage_Pix {
+        margin-top: 10px;
+        margin-bottom: 200px;
     }
     .DrinkPage_Input {
         width: 30px;
