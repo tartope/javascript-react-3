@@ -42,7 +42,6 @@ function App() {
         <div className = "App_header">
           <Button variant="primary" onClick={() => setShow(true)}>Menu</Button>
         </div>
-        <br />
         <Offcanvas show={show} onHide={() => setShow(false)}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu</Offcanvas.Title>
