@@ -12,7 +12,11 @@ import { atom } from 'recoil'
 //
 // Desc:
 //  
-export const lemonadeCounter = atom({
-    key: 'lemonadeCounter',
-    default: 1
+export const drinkData = atom({
+    key: 'drinkData',
+    default: {
+        lemonade: 0,
+        tea: 0,
+        coffee: 0
+    }
 })

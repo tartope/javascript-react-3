@@ -1,16 +1,16 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
-import { lemonadeCounter } from '../Util/Atoms'
+import { drinkData } from '../Util/Atoms'
 import './SalesPage.scss'
 
 export const SalesPage = () => {
-    let lemonadeCount = useRecoilValue(lemonadeCounter)
+    let lemonadeCount = useRecoilValue(drinkData)
         
     return (
         <div className = "SalesPage">
             SalesPage 
             <br />
-            { lemonadeCount}
+            {lemonadeCount.lemonade }
         </div>
     )
 }

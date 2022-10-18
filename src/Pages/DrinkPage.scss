@@ -1,4 +1,25 @@
 .DrinkPage {
     background-color:lightcoral;
     padding: 5px;
+
+    .DrinkPage_Table {
+        border-radius: 5px;
+        background-color: lightGray;
+        tr {
+            td {
+                padding: 5px
+            }
+        }
+    }
+    .DrinkPage_Input {
+        width: 30px;
+        height: 25px;
+    }
+    .DrinkPage_Header {
+        border-radius: 5px;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
 }
