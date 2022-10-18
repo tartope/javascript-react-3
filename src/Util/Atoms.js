@@ -6,6 +6,7 @@
 //
 
 import { atom } from 'recoil'
+import * as AppConfig from '../Util/App.Config'
 
 //
 // Usage: 
@@ -16,7 +17,7 @@ import { atom } from 'recoil'
 export const drinkData = atom({
     key: 'drinkData',
     default: {
-        lemonade: 0,
+        lemonade: 0, 
         tea: 0,
         coffee: 0
     }

@@ -15,7 +15,7 @@ export const DrinkPage = () => {
         if (qty) {
             setTheDrinkData(drinkData)
         } else {
-            drinkData.lemonade = 0
+            drinkData.lemonade.qty = 0 
             setTheDrinkData(drinkData)
         }
     }

@@ -1,4 +1,11 @@
 .SalesPage {
     background-color: lightsalmon;
     padding: 5px;
+
+    .SalesPage_Header {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        border-radius: 5px;
+    }
 }
