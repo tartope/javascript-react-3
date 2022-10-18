@@ -6,16 +6,12 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 function App() {
   const [show, setShow] = useState(false);
   let [counter, setCounter] = useState(0);
-  let [showFood, setShowFood] = useState(false);
+  let [showFood, setShowFood] = useState(true);
   let [showDrink, setShowDrink] = useState(false);
   let [showDessert, setShowDessert] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const onHandleClick = () => {
-     setCounter(++counter)
-  }
 
   const onHandleLink = (page) => {
     setShowFood(false)
@@ -40,16 +36,11 @@ function App() {
     <div className="App">
         <Button variant="primary" onClick={handleShow}>Show Sidebar</Button>
         <br />
-        <br />
-        <Button variant="primary" onClick={() => onHandleClick()}>Inc Counter</Button>
-        <br />
-        {counter}
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Sidebar</Offcanvas.Title>
+            <Offcanvas.Title>Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Button variant="primary" onClick={() => onHandleClick()}>Inc Counter</Button><br />
             <Button variant="link" onClick={() => onHandleLink("Food")}>Food</Button><br />
             <Button variant="link" onClick={() => onHandleLink("Drink")}>Drink</Button><br />
             <Button variant="link" onClick={() => onHandleLink("Dessert")}>Dessert</Button><br />
