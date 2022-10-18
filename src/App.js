@@ -10,9 +10,9 @@ import './App.scss'
 function App() {
   const [show, setShow] = useState(false);
   let [showFood, setShowFood] = useState(false);
-  let [showDrink, setShowDrink] = useState(false);
+  let [showDrink, setShowDrink] = useState(true);
   let [showDessert, setShowDessert] = useState(false);
-  let [showSales, setShowSales] = useState(true);
+  let [showSales, setShowSales] = useState(false);
 
   const onHandleLink = (page) => {
     setShowFood(false)
@@ -41,7 +41,7 @@ function App() {
     <div className = "App">
         <div className = "App_header">
           <div>
-            <Button variant="primary" onClick={() => setShow(true)}>Menu</Button>
+            <img className = "App_Hamburger" onClick={() => setShow(true)} src="hamburger.png" alt="menu"></img>
           </div>
           <div>
             <h2>Food Store</h2>

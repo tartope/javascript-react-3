@@ -45,7 +45,7 @@ export const DrinkPage = () => {
     return (
         <div className = "DrinkPage">
             <div className = "DrinkPage_Header">
-                <h2>Drinks</h2>
+                Drinks 
             </div>
             <table className = "DrinkPage_Table">
                 <tbody>

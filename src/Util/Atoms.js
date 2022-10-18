@@ -16,8 +16,8 @@ import { atom } from 'recoil'
 export const drinkData = atom({
     key: 'drinkData',
     default: {
-        lemonade: 1, 
-        tea: 2,
-        coffee: 3
+        tea: 0,
+        coffee: 0,
+        lemonade: 0
     }
 })

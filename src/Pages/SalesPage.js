@@ -15,7 +15,7 @@ export const SalesPage = () => {
     return (
         <div className = "SalesPage">
             <div className = "SalesPage_Header">
-                <h2>Sales</h2>
+                Sales
             </div>
             Lemonade: { formatter.format(AppConfig.lemonadePrice)} x {theDrinkData.lemonade} = { formatter.format(totalLemonade) }<br />
             Tea: { formatter.format(AppConfig.teaPrice)} x {theDrinkData.tea} = { formatter.format(totalTea) }<br />

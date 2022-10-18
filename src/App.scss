@@ -5,11 +5,18 @@
   line-height: 1.5em;
 }
 
-.App_header {
-  background: gray;
-  padding: 5px;
-  display: flex;
-  justify-content: space-between;
+.App {
+  .App_header {
+    background: burlywood;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .App_Hamburger {
+    cursor: pointer;
+    width: 40px;
+  }
 }
 
 input {
