@@ -15,7 +15,8 @@
         justify-content: center;
     }
     .DrinkPage_Table {
-        min-width: 200px;
+    
+        min-width: 310px;
         //border-radius: 5px;
         background-color: rgb(185, 136, 95);
         tr {
@@ -35,4 +36,16 @@
         width: 30px;
         height: 25px;
     }
+    .DrinkPage_Button {
+        width: 28px;
+        height: 26px;
+        border: none;
+        border-radius: 2px;
+        background-color: rgba(142, 65, 17, 0.819);
+        color: rgb(213, 213, 213);
+        margin-left: 5px;;
+    }
+    // .DrinkPage_Button:focus{
+    //     outline: none;
+    // }
 }

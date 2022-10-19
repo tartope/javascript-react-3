@@ -95,7 +95,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
             }
             <hr />
             <div className='SidebarContent_Total'>
-                Your Total:<span>{ formatter.format(grandTotal)}</span>
+                Total:<span>{ formatter.format(grandTotal)}</span>
             </div>
             <hr />
             <div className='SidebarContent_Checkout'>
