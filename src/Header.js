@@ -12,6 +12,14 @@ export const Header = () => {
         return parseInt(theDrinkData.tea) + parseInt(theDrinkData.coffee) + parseInt(theDrinkData.lemonade)
     }
 
+    const getClassName = () => {
+        if (getQuantity() < 9) {
+          return "Header_qty_1"
+        } else {
+          return "Header_qty_2" 
+        }
+    }
+
     return (
         <div className="Header">
             <div>
@@ -21,7 +29,7 @@ export const Header = () => {
                 <div className="Header_logo">The Coffee Place</div>
                 <div className="Header_cart">
                     <img width="40px" src="shopping-cart.png" alt="shopping cart"/>
-                    <div className="Header_qty_1">{getQuantity()}</div>
+                    <div className={getClassName()}>{getQuantity()}</div>
                 </div>
             </div>
         </div>
