@@ -1,15 +1,11 @@
 import { Header } from './Header'
-import { useRecoilState } from 'recoil'
-import { showSideDrawer } from './Util/Atoms'
 import React, { useState } from 'react'
+import { useRecoilState } from 'recoil'
 import Button from 'react-bootstrap/Button'
-import { HomePage } from './Pages/HomePage'
-import { FoodPage } from './Pages/FoodPage'
-import { DrinkPage } from './Pages/DrinkPage'
-import { SalesPage } from './Pages/SalesPage'
-import { DessertPage } from './Pages/DessertPage'
+import { showSideDrawer } from './Util/Atoms'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import './App.scss'
+import { Content } from './Content'
 
 function App() {
   const [show, setShowSideDrawer] = useRecoilState(showSideDrawer);
@@ -75,21 +71,7 @@ function App() {
             <Button variant="primary" onClick={() => onHandleCheckout()}>Checkout</Button>
           </Offcanvas.Body>
         </Offcanvas>
-        {
-          showHome && < HomePage  />
-        }
-        {
-          showFood && < FoodPage />
-        }
-        {
-          showDrink && <DrinkPage />
-        }
-        {
-          showDessert && <DessertPage />
-        }
-        {
-          showSales && <SalesPage />
-        }
+        <Content showHome={showHome} showFood={showFood} showDrink={showDrink} showDessert={showDessert} showSales={showSales} />
     </div>
   );
 }
