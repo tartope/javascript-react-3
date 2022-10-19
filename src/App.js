@@ -3,14 +3,12 @@ import { Content } from './Content'
 import React, { useState } from 'react'
 import { drinkData } from './Util/Atoms'
 import { showSideDrawer } from './Util/Atoms'
-import * as AppConfig from './Util/App.Config'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { SidebarContent } from './SidebarContent'
-import { useRecoilState, useRecoilValue, useResetRecoilState } from 'recoil'
+import { useRecoilState, useResetRecoilState } from 'recoil'
 import './App.scss'
 
 function App() {
-  const drinks = useRecoilValue(drinkData)
   let [showHome, setShowHome] = useState(true);
   let [showFood, setShowFood] = useState(false);
   let [showDrink, setShowDrink] = useState(false);
@@ -62,10 +60,19 @@ function App() {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <SidebarContent onHandleLink={(page) => onHandleLink(page)} onHandleCheckout={(totalPrice, order) => onHandleCheckout(totalPrice, order)}/>
+            <SidebarContent 
+              onHandleLink={(page) => onHandleLink(page)}
+              onHandleCheckout={(totalPrice, order) => onHandleCheckout(totalPrice, order)}
+            />
           </Offcanvas.Body>
         </Offcanvas>
-        <Content showHome={showHome} showFood={showFood} showDrink={showDrink} showDessert={showDessert} showSales={showSales} />
+        <Content 
+          showHome={showHome} 
+          showFood={showFood} 
+          showDrink={showDrink}
+          showDessert={showDessert} 
+          showSales={showSales} 
+        />
     </div>
   );
 }

@@ -26,17 +26,6 @@ export const drinkData = atom({
 
 //
 // Usage: 
-//  
-// Desc:
-//  Stores all the items that the customer has ordered.
-//
-export const completedOrder = atom({
-    key: 'completedOrder',
-    default: []
-})
-
-//
-// Usage: 
 //  Header (write)
 //  App (read/write)
 // Desc:
