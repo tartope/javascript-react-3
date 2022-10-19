@@ -1,0 +1,19 @@
+.SidebarContent {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(220, 190, 148);
+
+    .SidebarContent_NavItem {
+        background-color: rgb(255, 246, 240);
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div:hover {
+        background-color: rgb(255, 208, 141);
+    }
+}

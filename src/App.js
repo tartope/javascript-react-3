@@ -2,10 +2,10 @@ import { Header } from './Header'
 import { Content } from './Content'
 import React, { useState } from 'react'
 import { useRecoilState } from 'recoil'
-import Button from 'react-bootstrap/Button'
 import { showSideDrawer } from './Util/Atoms'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import './App.scss'
+import { SidebarContent } from './SidebarContent'
 
 function App() {
   let [showHome, setShowHome] = useState(true);
@@ -34,7 +34,7 @@ function App() {
       case "Dessert":
         setShowDessert(true)
         break;
-      case "Sales":
+      case "Order History":
         setShowSales(true)
         break;
       default:
@@ -54,21 +54,7 @@ function App() {
             <Offcanvas.Title>The Coffee Place Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Button variant="link" onClick={() => onHandleLink("Home")}>Home</Button><br />
-            <Button variant="link" onClick={() => onHandleLink("Food")}>Food</Button><br />
-            <Button variant="link" onClick={() => onHandleLink("Drink")}>Drink</Button><br />
-            <Button variant="link" onClick={() => onHandleLink("Dessert")}>Dessert</Button><br />
-            <Button variant="link" onClick={() => onHandleLink("Sales")}>Sales</Button><br />
-            <hr />
-            Your Order <br/>
-            Your cart is empty<br/>
-            - Item 1 <br/>
-            - Item 2 <br/>
-            - Item 3 <br/>
-            <hr />
-            Your Total: $0.00
-            <hr />
-            <Button variant="primary" onClick={() => onHandleCheckout()}>Checkout</Button>
+            <SidebarContent onHandleLink={(page) => onHandleLink(page)} onHandleCheckout={() => onHandleCheckout()}/>
           </Offcanvas.Body>
         </Offcanvas>
         <Content showHome={showHome} showFood={showFood} showDrink={showDrink} showDessert={showDessert} showSales={showSales} />
