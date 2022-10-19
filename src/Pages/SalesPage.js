@@ -1,30 +1,34 @@
 import React from 'react'
-import { useRecoilValue } from 'recoil'
-import { drinkData } from '../Util/Atoms'
-import * as AppConfig from '../Util/App.Config'
 import './SalesPage.scss'
 import { Footer } from '../Footer'
+import * as localStorageProxy from '../Util/LocalStorageProxy'
 
 export const SalesPage = () => {
-    // let theDrinkData = useRecoilValue(drinkData)
-    // const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
-    // const totalLemonade = AppConfig.lemonadePrice * theDrinkData.lemonade
-    // const totalTea = AppConfig.teaPrice * theDrinkData.tea
-    // const totalCoffee = AppConfig.coffeePrice * theDrinkData.coffee
-    // const grandTotal = totalLemonade + totalTea + totalCoffee
+    const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+    const orders = localStorageProxy.getOrders()
+    console.log(orders)
 
     return (
         <div className = "SalesPage">
             <div className = "SalesPage_Header">
                 Order History
             </div>
-            {/* <div className = "SalesPage_Content">
-                Lemonade: { formatter.format(AppConfig.lemonadePrice)} x {theDrinkData.lemonade} = { formatter.format(totalLemonade) }<br />
-                Tea: { formatter.format(AppConfig.teaPrice)} x {theDrinkData.tea} = { formatter.format(totalTea) }<br />
-                Coffee: { formatter.format(AppConfig.coffeePrice)} x {theDrinkData.coffee} = { formatter.format(totalCoffee) }<br />
-                <br />
-                Total: { formatter.format(grandTotal)}
-            </div> */}
+            <div className="SalesPage_Content">
+            {   
+                orders && 
+                orders.map(i => {
+                    return <div key={i.id}>Order: {i.id} <br /> Date: {i.date} <br /> Total: {formatter.format(i.total)}
+                        <br/>
+                        {
+                            i.items.map(k => {
+                                return <div key={k.item}>{k.item} {k.qty} {formatter.format(k.price)} {formatter.format(k.subTotal)}</div>
+                            })
+                        }
+                        <hr />
+                    </div>
+                })
+            }
+            </div>
             <Footer />
         </div>
     )

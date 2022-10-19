@@ -10,10 +10,10 @@ import * as localStorageProxy from './Util/LocalStorageProxy'
 import './App.scss'
 
 function App() {
-  let [showHome, setShowHome] = useState(true);
+  let [showHome, setShowHome] = useState(false);
   let [showFood, setShowFood] = useState(false);
   let [showDrink, setShowDrink] = useState(false);
-  let [showSales, setShowSales] = useState(false);
+  let [showSales, setShowSales] = useState(true);
   let [showDessert, setShowDessert] = useState(false);
   const resetDrinkState = useResetRecoilState(drinkData)
   let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
@@ -52,6 +52,7 @@ function App() {
   const onHandleCheckout = (total, completedOrder) => {
     const orders = localStorageProxy.getOrders()
     orders.push({
+      id: orders.length + 1,
       items: completedOrder,
       total: total,
       date: new Date().toISOString().slice(0, 10)
