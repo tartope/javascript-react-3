@@ -8,7 +8,7 @@ import './App.scss'
 import { Content } from './Content'
 
 function App() {
-  const [show, setShowSideDrawer] = useRecoilState(showSideDrawer);
+  const [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
   let [showHome, setShowHome] = useState(true);
   let [showFood, setShowFood] = useState(false);
   let [showDrink, setShowDrink] = useState(false);
@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="App">
         <Header />
-        <Offcanvas show={show} onHide={() => setShowSideDrawer(false)}>
+        <Offcanvas show={showTheSideDrawer} onHide={() => setShowSideDrawer(false)}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>The Coffee Place Menu</Offcanvas.Title>
           </Offcanvas.Header>
