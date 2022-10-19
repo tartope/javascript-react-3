@@ -1,9 +1,9 @@
 import { useRecoilValue } from 'recoil'
 import { drinkData } from './Util/Atoms'
-import Button from 'react-bootstrap/Button'
-import './SidebarContent.scss'
 import { buildOrder } from './Util/Order'
+import Button from 'react-bootstrap/Button'
 import { SidebarOrderTable } from './SidebarOrderTable'
+import './SidebarContent.scss'
 
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
     const drinks = useRecoilValue(drinkData)
