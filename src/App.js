@@ -51,7 +51,7 @@ function App() {
         <Header />
         <Offcanvas show={showTheSideDrawer} onHide={() => setShowSideDrawer(false)}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>The Coffee Place Menu</Offcanvas.Title>
+            <Offcanvas.Title>The Coffee Place</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <SidebarContent onHandleLink={(page) => onHandleLink(page)} onHandleCheckout={() => onHandleCheckout()}/>

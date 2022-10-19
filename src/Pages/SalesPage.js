@@ -3,6 +3,7 @@ import { useRecoilValue } from 'recoil'
 import { drinkData } from '../Util/Atoms'
 import * as AppConfig from '../Util/App.Config'
 import './SalesPage.scss'
+import { Footer } from '../Footer'
 
 export const SalesPage = () => {
     let theDrinkData = useRecoilValue(drinkData)
@@ -15,13 +16,16 @@ export const SalesPage = () => {
     return (
         <div className = "SalesPage">
             <div className = "SalesPage_Header">
-                Sales
+                Order History
             </div>
-            Lemonade: { formatter.format(AppConfig.lemonadePrice)} x {theDrinkData.lemonade} = { formatter.format(totalLemonade) }<br />
-            Tea: { formatter.format(AppConfig.teaPrice)} x {theDrinkData.tea} = { formatter.format(totalTea) }<br />
-            Coffee: { formatter.format(AppConfig.coffeePrice)} x {theDrinkData.coffee} = { formatter.format(totalCoffee) }<br />
-            <br />
-            Total: { formatter.format(grandTotal)}
+            <div className = "SalesPage_Content">
+                Lemonade: { formatter.format(AppConfig.lemonadePrice)} x {theDrinkData.lemonade} = { formatter.format(totalLemonade) }<br />
+                Tea: { formatter.format(AppConfig.teaPrice)} x {theDrinkData.tea} = { formatter.format(totalTea) }<br />
+                Coffee: { formatter.format(AppConfig.coffeePrice)} x {theDrinkData.coffee} = { formatter.format(totalCoffee) }<br />
+                <br />
+                Total: { formatter.format(grandTotal)}
+            </div>
+            <Footer />
         </div>
     )
 }

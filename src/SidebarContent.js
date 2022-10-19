@@ -22,7 +22,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
             </div>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Order History")}>
                 <div>Order History</div>
-                <div>icon</div>
+                <div>$$$</div>
             </div>
             <hr />
             Your Order <br/>
