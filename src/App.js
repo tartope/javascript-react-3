@@ -8,9 +8,9 @@ import Offcanvas from 'react-bootstrap/Offcanvas'
 import './App.scss'
 
 function App() {
-  let [showHome, setShowHome] = useState(true);
+  let [showHome, setShowHome] = useState(false);
   let [showFood, setShowFood] = useState(false);
-  let [showDrink, setShowDrink] = useState(false);
+  let [showDrink, setShowDrink] = useState(true);
   let [showSales, setShowSales] = useState(false);
   let [showDessert, setShowDessert] = useState(false);
   const [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
