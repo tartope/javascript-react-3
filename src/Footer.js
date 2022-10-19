@@ -15,8 +15,8 @@ export const Footer = () => {
         </div>
         <div className='social'>
             <Image className='icon' width="25px" rounded={true} fluid={true} src="insta-icon.png" alt="insta" />
-            <Image className='icon' width="25px" rounded={true} fluid={true} src="facebook-icon.png" alt="insta" />
-            <Image className='icon' width="25px" rounded={true} fluid={true} src="twitter-icon.png" alt="insta" />
+            <Image className='icon' width="25px" rounded={true} fluid={true} src="facebook-icon.png" alt="facebook" />
+            <Image className='icon' width="25px" rounded={true} fluid={true} src="twitter-icon.png" alt="twitter" />
         </div>
     </div>
   )
