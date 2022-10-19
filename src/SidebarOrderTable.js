@@ -1,24 +1,9 @@
 import React from 'react'
 import './SidebarOrderTable.scss'
-import * as AppConfig from './Util/App.Config'
 
-export const SidebarOrderTable = ({purchasedItems}) => {
+export const SidebarOrderTable = ({completeOrder}) => {
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
 
-    const getPriceForDrink = (type) => {
-        return AppConfig.prices.filter(p=>p.type === type)[0].price
-    }
-
-    let completeOrder = purchasedItems.filter(i => i.qty > 0)
-    completeOrder = completeOrder.map(i => {
-        return {
-            item: i.type,
-            qty: i.qty,
-            price: getPriceForDrink(i.type),
-            subTotal: i.qty * getPriceForDrink(i.type)
-        }
-    })
-    
     return (
         <div className='SidebarOrderTable'>
             <table className='SidebarContent_Table'>

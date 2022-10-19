@@ -46,10 +46,9 @@ function App() {
     setShowSideDrawer(false) // Close the sidebar.
   }
 
-  const onHandleCheckout = (totalPrice) => {
-    console.log("Checkout Total Price: " + totalPrice)
-    console.log(AppConfig.prices)
-    console.log(drinks)
+  const onHandleCheckout = (total, completedOrder) => {
+    console.log(completedOrder)
+    console.log(total)
     resetDrinkState()
   }
 
@@ -63,7 +62,7 @@ function App() {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <SidebarContent onHandleLink={(page) => onHandleLink(page)} onHandleCheckout={(totalPrice) => onHandleCheckout(totalPrice)}/>
+            <SidebarContent onHandleLink={(page) => onHandleLink(page)} onHandleCheckout={(totalPrice, order) => onHandleCheckout(totalPrice, order)}/>
           </Offcanvas.Body>
         </Offcanvas>
         <Content showHome={showHome} showFood={showFood} showDrink={showDrink} showDessert={showDessert} showSales={showSales} />
