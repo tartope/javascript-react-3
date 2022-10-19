@@ -9,9 +9,10 @@ export const DessertPage = () => {
             Dessert 
         </div>
         <div>
-            Dessert 1 <br/>
-            Dessert 2 <br/>
-            Dessert 3 <br/>
+            <br/>
+            Todo...
+            <br/>
+            <br/>
         </div>
         <Footer />
     </div>

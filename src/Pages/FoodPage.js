@@ -9,9 +9,10 @@ export const FoodPage = () => {
             Food 
         </div>
         <div>
-            Food 1 <br/>
-            Food 2 <br/>
-            Food 3 <br/>
+            <br/>
+            Todo...
+            <br/>
+            <br/>
         </div>
         <Footer />
     </div>

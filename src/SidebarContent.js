@@ -35,12 +35,12 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
                 <div>Home</div>
                 <div>icon</div>
             </div>
-            <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Food")}>
-                <div>Food</div>
-                <div>icon</div>
-            </div>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Drink")}>
                 <div>Drink</div>
+                <div>icon</div>
+            </div>
+            <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Food")}>
+                <div>Food</div>
                 <div>icon</div>
             </div>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Dessert")}>
