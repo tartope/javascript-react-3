@@ -13,7 +13,7 @@ function App() {
   let [showDrink, setShowDrink] = useState(true);
   let [showSales, setShowSales] = useState(false);
   let [showDessert, setShowDessert] = useState(false);
-  const [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
+  let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
 
   const onHandleLink = (page) => {
     setShowHome(false)
