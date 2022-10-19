@@ -1,11 +1,11 @@
 import { Header } from './Header'
+import { Content } from './Content'
 import React, { useState } from 'react'
 import { useRecoilState } from 'recoil'
 import Button from 'react-bootstrap/Button'
 import { showSideDrawer } from './Util/Atoms'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import './App.scss'
-import { Content } from './Content'
 
 function App() {
   const [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
