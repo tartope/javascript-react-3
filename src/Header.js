@@ -8,10 +8,8 @@ export const Header = () => {
     const [, setShowSideDrawer] = useRecoilState(showSideDrawer)
     let theDrinkData = useRecoilValue(drinkData) 
 
-
     const getQuantity = () => {
-        return 0
-        // return parseInt(theDrinkData.tea) + parseInt(theDrinkData.coffee) + parseInt(theDrinkData.lemonade)
+        return parseInt(theDrinkData.tea) + parseInt(theDrinkData.coffee) + parseInt(theDrinkData.lemonade)
     }
 
     return (
