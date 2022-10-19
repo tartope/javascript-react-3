@@ -11,6 +11,7 @@ import { atom } from 'recoil'
 // Usage: 
 //  DrinkPage (read/write)
 //  SalesPage (read)
+//  App (read)
 // Desc:
 //  Stores the drinks that the customer ordered.
 //

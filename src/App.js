@@ -1,11 +1,12 @@
 import { Header } from './Header'
 import { Content } from './Content'
 import React, { useState } from 'react'
-import { useRecoilState } from 'recoil'
+import { drinkData } from './Util/Atoms'
 import { showSideDrawer } from './Util/Atoms'
 import Offcanvas from 'react-bootstrap/Offcanvas'
-import './App.scss'
 import { SidebarContent } from './SidebarContent'
+import { useRecoilState, useRecoilValue } from 'recoil'
+import './App.scss'
 
 function App() {
   let [showHome, setShowHome] = useState(false);
@@ -14,6 +15,7 @@ function App() {
   let [showSales, setShowSales] = useState(false);
   let [showDessert, setShowDessert] = useState(false);
   let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
+  const drinks = useRecoilValue(drinkData)
 
   const onHandleLink = (page) => {
     setShowHome(false)
@@ -43,7 +45,8 @@ function App() {
   }
 
   const onHandleCheckout = (totalPrice) => {
-    console.log("Checkout: " + totalPrice)
+    console.log("Checkout Total Price: " + totalPrice)
+    console.log(drinks)
   }
 
   return (
