@@ -6,10 +6,16 @@ import * as localStorageProxy from '../Util/LocalStorageProxy'
 export const SalesPage = () => {
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
     const orders = localStorageProxy.getOrders()
+    const total = orders.map(i=> i.total).reduce((a,b)=> a+b, 0)
+
     return (
         <div className = "SalesPage">
             <div className = "SalesPage_Header">
                 Order History
+            </div>
+            <div className="SalesPage_Content">
+                Grand Total: {formatter.format(total)} <br />
+                Total Number of Orders: {orders.length}
             </div>
             <div className="SalesPage_Content">
             {   
@@ -27,6 +33,7 @@ export const SalesPage = () => {
                 })
             }
             </div>
+            <br />
             <Footer />
         </div>
     )
