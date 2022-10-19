@@ -21,6 +21,11 @@
     .Header_logo_area {
         display: flex;
     }
+    .Header_cart {
+        // background-color: blue;
+        display: inline-block;
+        padding-right: 10px;
+    }
     .Header_qty {
         color: white;
         background-color: red;

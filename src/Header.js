@@ -10,7 +10,7 @@ export const Header = () => {
 
 
     const getQuantity = () => {
-        return 1
+        return 0
         // return parseInt(theDrinkData.tea) + parseInt(theDrinkData.coffee) + parseInt(theDrinkData.lemonade)
     }
 
@@ -21,14 +21,9 @@ export const Header = () => {
                 </div>
                 <div className="Header_logo_area">
                 <div className="Header_logo">The Coffee Place</div>
-                <div>
+                <div className="Header_cart">
                     <img width="40px" src="shopping-cart.png" alt="shopping cart"/>
-                    {
-                        getQuantity() > 0 && 
-                        <div className="Header_qty">
-                            {getQuantity()}
-                        </div>
-                    }
+                    <div className="Header_qty">{getQuantity()}</div>
                 </div>
             </div>
         </div>
