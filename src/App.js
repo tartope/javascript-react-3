@@ -6,17 +6,18 @@ import { showSideDrawer } from './Util/Atoms'
 import * as AppConfig from './Util/App.Config'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { SidebarContent } from './SidebarContent'
-import { useRecoilState, useRecoilValue } from 'recoil'
+import { useRecoilState, useRecoilValue, useResetRecoilState } from 'recoil'
 import './App.scss'
 
 function App() {
+  const drinks = useRecoilValue(drinkData)
   let [showHome, setShowHome] = useState(false);
   let [showFood, setShowFood] = useState(false);
   let [showDrink, setShowDrink] = useState(true);
   let [showSales, setShowSales] = useState(false);
   let [showDessert, setShowDessert] = useState(false);
+  const resetDrinkState = useResetRecoilState(drinkData)
   let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
-  const drinks = useRecoilValue(drinkData)
 
   const onHandleLink = (page) => {
     setShowHome(false)
@@ -49,6 +50,7 @@ function App() {
     console.log("Checkout Total Price: " + totalPrice)
     console.log(AppConfig.prices)
     console.log(drinks)
+    resetDrinkState()
   }
 
   return (

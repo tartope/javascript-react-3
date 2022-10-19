@@ -7,6 +7,7 @@ import './SidebarContent.scss'
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
     let grandTotal = 0
     const drinks = useRecoilValue(drinkData)
+
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
  
     const getPriceForDrink = (type) => {
