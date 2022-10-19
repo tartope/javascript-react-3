@@ -56,7 +56,9 @@ function App() {
         <Header />
         <Offcanvas show={showTheSideDrawer} onHide={() => setShowSideDrawer(false)}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>The Coffee Place</Offcanvas.Title>
+            <Offcanvas.Title>
+              <div className='App_Title'>The Coffee Place</div>
+            </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <SidebarContent onHandleLink={(page) => onHandleLink(page)} onHandleCheckout={(totalPrice) => onHandleCheckout(totalPrice)}/>

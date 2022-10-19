@@ -5,6 +5,15 @@
   line-height: 1.5em;
 }
 
+.App_Title {
+  width: 340px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+  margin-bottom: -25px;
+}
+
 input {
   padding: 3px;
 }
