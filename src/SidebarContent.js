@@ -3,6 +3,7 @@ import { drinkData } from './Util/Atoms'
 import * as AppConfig from './Util/App.Config'
 import Button from 'react-bootstrap/Button'
 import './SidebarContent.scss'
+import { SidebarOrderTable } from './SidebarOrderTable'
 
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
     let grandTotal = 0
@@ -14,7 +15,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
         return AppConfig.prices.filter(p=>p.type === type)[0].price
     }
 
-    // Convert drink object to array for display.
+    // Convert drink object to array.
     let d = Object.keys(drinks)
     let purchasedItems = d.map(i => {
         return {
@@ -37,7 +38,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
             </div>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Drink")}>
                 <div>Drink</div>
-                <div><img width="20px" src="coffee-icon.png" alt="food" /></div>
+                <div><img width="20px" src="coffee-icon.jpg" alt="food" /></div>
             </div>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Food")}>
                 <div>Food</div>
@@ -57,41 +58,14 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
                 Your Order
             </div>
             {
-                grandTotal > 0 &&
-                <strong>Drinks</strong>
+                grandTotal > 0 && 
+                <>
+                    <strong>Drinks</strong>
+                    <SidebarOrderTable purchasedItems={purchasedItems}/>
+                </>
             }
             {
-                 grandTotal > 0 &&
-                <table className='SidebarContent_Table'>
-                    <thead>
-                        <tr>
-                            <td>Item</td>
-                            <td>Qty</td>
-                            <td>Price</td>
-                            <td>Subtotal</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        { 
-                            purchasedItems.map(i => {
-                                if (i.qty > 0) {
-                                    return <tr key={i.type}>
-                                                <td >{i.type}</td>
-                                                <td>{i.qty}</td>
-                                                <td>{ formatter.format(getPriceForDrink(i.type)) } {' '}ea</td>
-                                                <td>{formatter.format(getPriceForDrink(i.type) * i.qty)}</td>
-                                            </tr>
-                                } else {
-                                    return null
-                                }
-                            })
-                        }
-                    </tbody>
-                </table>  
-            } 
-            {
-                grandTotal === 0 &&
-                <div>Your cart is empty.</div>
+                grandTotal === 0 && <> Your cart is empty. </>
             }
             <hr />
             <div className='SidebarContent_Total'>

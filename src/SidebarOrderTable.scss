@@ -1,0 +1,16 @@
+
+.SidebarOrderTable {
+   
+    .SidebarOrderTable_Table {
+        width: 345px;
+        margin-top: 5px;
+        background-color: rgb(255, 255, 255);
+        tr {
+            border: 1px solid black;
+            td {
+                align-items: right;
+                padding: 5px;
+            }
+        }
+    }
+}

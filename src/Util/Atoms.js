@@ -13,7 +13,7 @@ import { atom } from 'recoil'
 //  SalesPage (read)
 //  App (read)
 // Desc:
-//  Stores the drinks that the customer ordered.
+//  Stores the drinks that the customer can order.
 //
 export const drinkData = atom({
     key: 'drinkData',
@@ -22,6 +22,17 @@ export const drinkData = atom({
         coffee: 0,
         lemonade: 0
     }
+})
+
+//
+// Usage: 
+//  
+// Desc:
+//  Stores all the items that the customer has ordered.
+//
+export const completedOrder = atom({
+    key: 'completedOrder',
+    default: []
 })
 
 //
