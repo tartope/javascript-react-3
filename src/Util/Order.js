@@ -2,7 +2,7 @@
 // File: Order.js
 // Auth: Martin Burolla
 // Date: 10/19/2022
-// Desc: The one and only place where the customer's order is determined.
+// Desc: The one and only place where the customer order is calculated.
 //
 
 import * as AppConfig from './App.Config'
