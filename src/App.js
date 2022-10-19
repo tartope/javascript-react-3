@@ -1,11 +1,12 @@
 import { Header } from './Header'
 import { Content } from './Content'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { drinkData } from './Util/Atoms'
 import { showSideDrawer } from './Util/Atoms'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { SidebarContent } from './SidebarContent'
 import { useRecoilState, useResetRecoilState } from 'recoil'
+import * as localStorageProxy from './Util/LocalStorageProxy'
 import './App.scss'
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
   let [showDessert, setShowDessert] = useState(false);
   const resetDrinkState = useResetRecoilState(drinkData)
   let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
+
+  useEffect(() => {
+    localStorageProxy.initLocalStorageProxy()
+  }, [])
 
   const onHandleLink = (page) => {
     setShowHome(false)
@@ -45,8 +50,13 @@ function App() {
   }
 
   const onHandleCheckout = (total, completedOrder) => {
-    console.log(completedOrder)
-    console.log(total)
+    const orders = localStorageProxy.getOrders()
+    orders.push({
+      items: completedOrder,
+      total: total,
+      date: new Date().toISOString().slice(0, 10)
+    })
+    localStorageProxy.setOrders(orders)
     resetDrinkState()
   }
 
