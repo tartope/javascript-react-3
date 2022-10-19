@@ -72,7 +72,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
                 <div>Your cart is empty.</div>
             }
             <hr />
-            Your Total:  { formatter.format(grandTotal)}
+            Your Total: { formatter.format(grandTotal)}
             <hr />
             <Button variant="primary" onClick={() => onHandleCheckout(grandTotal)}>Checkout</Button>
         </div>

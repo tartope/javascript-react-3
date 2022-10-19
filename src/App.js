@@ -3,6 +3,7 @@ import { Content } from './Content'
 import React, { useState } from 'react'
 import { drinkData } from './Util/Atoms'
 import { showSideDrawer } from './Util/Atoms'
+import * as AppConfig from './Util/App.Config'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { SidebarContent } from './SidebarContent'
 import { useRecoilState, useRecoilValue } from 'recoil'
@@ -46,6 +47,7 @@ function App() {
 
   const onHandleCheckout = (totalPrice) => {
     console.log("Checkout Total Price: " + totalPrice)
+    console.log(AppConfig.prices)
     console.log(drinks)
   }
 
