@@ -1,3 +1,6 @@
+import { Header } from './Header'
+import { useRecoilState } from 'recoil'
+import { showSideDrawer } from './Util/Atoms'
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import { HomePage } from './Pages/HomePage'
@@ -9,7 +12,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas'
 import './App.scss'
 
 function App() {
-  const [show, setShow] = useState(false);
+  const [show, setShowSideDrawer] = useRecoilState(showSideDrawer);
   let [showHome, setShowHome] = useState(true);
   let [showFood, setShowFood] = useState(false);
   let [showDrink, setShowDrink] = useState(false);
@@ -40,7 +43,7 @@ function App() {
         break;
       default:
     }
-    setShow(false) // Close the sidebar.
+    setShowSideDrawer(false) // Close the sidebar.
   }
 
   const onHandleCheckout = () => {
@@ -49,19 +52,8 @@ function App() {
 
   return (
     <div className="App">
-        <div className="App_header">
-          <div>
-            <img className="App_hamburger" onClick={() => setShow(true)} src="hamburger.png" alt="menu"></img>
-          </div>
-          <div className="App_logo_area">
-            <div className="App_logo">The Coffee Place</div>
-            <div>
-                <img width="40px" src="shopping-cart.png" alt="shopping cart"/>
-                <div className="App_qty">1</div>
-            </div>
-          </div>
-        </div>
-        <Offcanvas show={show} onHide={() => setShow(false)}>
+        <Header />
+        <Offcanvas show={show} onHide={() => setShowSideDrawer(false)}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>The Coffee Place Menu</Offcanvas.Title>
           </Offcanvas.Header>

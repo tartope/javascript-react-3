@@ -12,7 +12,8 @@ import { atom } from 'recoil'
 //  DrinkPage (read/write)
 //  SalesPage (read)
 // Desc:
-//  
+//  Stores the drinks that the customer ordered.
+//
 export const drinkData = atom({
     key: 'drinkData',
     default: {
@@ -20,4 +21,16 @@ export const drinkData = atom({
         coffee: 0,
         lemonade: 0
     }
+})
+
+//
+// Usage: 
+//  Header (write)
+//  App (read/write)
+// Desc:
+//  Used to show and hide the offcanvas sidedrawer.
+//
+export const showSideDrawer = atom({
+    key: 'showSideDrawer',
+    default: false
 })
