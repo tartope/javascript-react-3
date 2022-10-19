@@ -1,6 +1,22 @@
 .Footer {
     background-color: rgb(18, 0, 0);
-    color: rgb(182, 164, 133);
+    color: rgb(189, 189, 189);
     padding: 5px;
     margin: -5px;
+    display: flex;
+    justify-content: space-between;
+    .menu {
+        padding-left: 15px;
+    }
+    .center {
+        padding-top: 22px;
+    }
+    .social {
+        padding-top: 15px;
+        width: 150px;
+     
+        .icon {
+            margin: 10px
+        }
+    }
 }

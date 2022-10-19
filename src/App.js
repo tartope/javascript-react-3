@@ -61,10 +61,10 @@ function App() {
             <Button variant="link" onClick={() => onHandleLink("Sales")}>Sales</Button><br />
             <hr />
             Your Order <br/>
-
-            Item 1 <br/>
-            Item 2 <br/>
-            Item 3 <br/>
+            Your cart is empty<br/>
+            - Item 1 <br/>
+            - Item 2 <br/>
+            - Item 3 <br/>
             <hr />
             Your Total: $0.00
             <hr />
