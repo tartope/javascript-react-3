@@ -6,8 +6,6 @@ import * as localStorageProxy from '../Util/LocalStorageProxy'
 export const SalesPage = () => {
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
     const orders = localStorageProxy.getOrders()
-    console.log(orders)
-
     return (
         <div className = "SalesPage">
             <div className = "SalesPage_Header">
@@ -21,7 +19,7 @@ export const SalesPage = () => {
                         <br/>
                         {
                             i.items.map(k => {
-                                return <div key={k.item}>{k.item} {k.qty} {formatter.format(k.price)} {formatter.format(k.subTotal)}</div>
+                                return <div key={k.item}>&nbsp;&nbsp;&nbsp;{k.item} {k.qty} {formatter.format(k.price)} {formatter.format(k.subTotal)}</div>
                             })
                         }
                         <hr />
