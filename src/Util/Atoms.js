@@ -33,5 +33,5 @@ export const drinkData = atom({
 //
 export const showSideDrawer = atom({
     key: 'showSideDrawer',
-    default: true
+    default: false
 })
