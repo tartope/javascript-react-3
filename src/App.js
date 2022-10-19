@@ -8,9 +8,9 @@ import './App.scss'
 import { SidebarContent } from './SidebarContent'
 
 function App() {
-  let [showHome, setShowHome] = useState(true);
+  let [showHome, setShowHome] = useState(false);
   let [showFood, setShowFood] = useState(false);
-  let [showDrink, setShowDrink] = useState(false);
+  let [showDrink, setShowDrink] = useState(true);
   let [showSales, setShowSales] = useState(false);
   let [showDessert, setShowDessert] = useState(false);
   let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
@@ -42,8 +42,8 @@ function App() {
     setShowSideDrawer(false) // Close the sidebar.
   }
 
-  const onHandleCheckout = () => {
-    console.log("Checkout")
+  const onHandleCheckout = (totalPrice) => {
+    console.log("Checkout: " + totalPrice)
   }
 
   return (
@@ -54,7 +54,7 @@ function App() {
             <Offcanvas.Title>The Coffee Place</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <SidebarContent onHandleLink={(page) => onHandleLink(page)} onHandleCheckout={() => onHandleCheckout()}/>
+            <SidebarContent onHandleLink={(page) => onHandleLink(page)} onHandleCheckout={(totalPrice) => onHandleCheckout(totalPrice)}/>
           </Offcanvas.Body>
         </Offcanvas>
         <Content showHome={showHome} showFood={showFood} showDrink={showDrink} showDessert={showDessert} showSales={showSales} />

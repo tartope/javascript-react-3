@@ -54,19 +54,19 @@ export const DrinkPage = () => {
                     <tbody>
                         <tr>
                             <td>Lemonade</td>
-                            <td>{ formatter.format(AppConfig.lemonadePrice) }</td>
+                            <td>{ formatter.format(AppConfig.prices.filter(i=>i.type === "lemonade")[0].price) }</td>
                             <td>x</td>
                             <td><input value={theDrinkData.lemonade} ref={inputRef} onChange={(e) => onHandleLemonadeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                         </tr>
                         <tr>
                             <td>Tea</td>
-                            <td>{ formatter.format(AppConfig.teaPrice) }</td>
+                            <td>{ formatter.format(AppConfig.prices.filter(i=>i.type === "tea")[0].price) }</td>
                             <td>x</td>
                             <td><input value={theDrinkData.tea} ref={inputRef} onChange={(e) => onHandleTeaChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                         </tr>
                         <tr>
                             <td>Coffee</td>
-                            <td>{ formatter.format(AppConfig.coffeePrice) }</td>
+                            <td>{ formatter.format(AppConfig.prices.filter(i=>i.type === "coffee")[0].price) }</td>
                             <td>x</td>
                             <td><input value={theDrinkData.coffee} ref={inputRef} onChange={(e) => onHandleCoffeeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                         </tr>
