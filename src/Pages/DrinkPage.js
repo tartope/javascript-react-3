@@ -11,6 +11,10 @@ export const DrinkPage = () => {
     let [theDrinkData, setTheDrinkData] = useRecoilState(drinkData)
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
 
+    //
+    // Input text change...
+    //
+
     const onHandleLemonadeChange = (qty) => {
         let drinkData = {...theDrinkData}
         drinkData.lemonade = qty  
@@ -20,15 +24,6 @@ export const DrinkPage = () => {
             drinkData.lemonade = 0 
             setTheDrinkData(drinkData)
         }
-    }
-
-    const onHandleLemonadeClick = (value) => {
-        let drinkData = {...theDrinkData}
-        if (value === -1 && drinkData.lemonade === 0) {
-            return;
-        }
-        drinkData.lemonade = drinkData.lemonade + value  
-        setTheDrinkData(drinkData)
     }
 
     const onHandleTeaChange = (qty) => {
@@ -51,6 +46,37 @@ export const DrinkPage = () => {
             drinkData.coffee = 0
             setTheDrinkData(drinkData)
         }
+    }
+
+    //
+    // Button Clicks...
+    //
+
+    const onHandleLemonadeClick = (value) => {
+        let drinkData = {...theDrinkData}
+        if (value === -1 && drinkData.lemonade === 0) {
+            return;
+        }
+        drinkData.lemonade = drinkData.lemonade + value  
+        setTheDrinkData(drinkData)
+    }
+
+    const onHandleTeaClick = (value) => {
+        let drinkData = {...theDrinkData}
+        if (value === -1 && drinkData.tea === 0) {
+            return;
+        }
+        drinkData.tea = drinkData.tea + value  
+        setTheDrinkData(drinkData)
+    }
+
+    const onHandleCoffeeClick = (value) => {
+        let drinkData = {...theDrinkData}
+        if (value === -1 && drinkData.coffee === 0) {
+            return;
+        }
+        drinkData.coffee = drinkData.coffee + value  
+        setTheDrinkData(drinkData)
     }
 
     return (
@@ -76,16 +102,20 @@ export const DrinkPage = () => {
                             <td>{ formatter.format(AppConfig.prices.filter(i=>i.type === "tea")[0].price) }</td>
                             <td>x</td>
                             <td><input value={theDrinkData.tea} ref={inputRef} onChange={(e) => onHandleTeaChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
-                        
-                        
+                            <td>
+                                <button className="DrinkPage_Button" onClick={() => onHandleTeaClick(1)}>+</button>
+                                <button className="DrinkPage_Button" onClick={() => onHandleTeaClick(-1)}>-</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>Coffee</td>
                             <td>{ formatter.format(AppConfig.prices.filter(i=>i.type === "coffee")[0].price) }</td>
                             <td>x</td>
                             <td><input value={theDrinkData.coffee} ref={inputRef} onChange={(e) => onHandleCoffeeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
-                            
-                        
+                            <td>
+                                <button className="DrinkPage_Button" onClick={() => onHandleCoffeeClick(1)}>+</button>
+                                <button className="DrinkPage_Button" onClick={() => onHandleCoffeeClick(-1)}>-</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
