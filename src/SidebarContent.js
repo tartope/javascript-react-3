@@ -33,19 +33,19 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
         <div className='SidebarContent'>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Home")}>
                 <div>Home</div>
-                <div>icon</div>
+                <div><img width="20px" src="home-icon.png" alt="food" /></div>
             </div>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Drink")}>
                 <div>Drink</div>
-                <div>icon</div>
+                <div><img width="20px" src="coffee-icon.png" alt="food" /></div>
             </div>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Food")}>
                 <div>Food</div>
-                <div>icon</div>
+                <div><img width="20px" src="food-icon.png" alt="food" /></div>
             </div>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Dessert")}>
                 <div>Dessert</div>
-                <div>icon</div>
+                <div><img width="30px" src="cake-icon.png" alt="food" /></div>
             </div>
             <hr />
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Order History")}>
