@@ -12,18 +12,15 @@
         display: flex;
         justify-content: space-between;
     }
-
     .SidebarContent_NavItem:hover {
         background-color: rgb(167, 100, 6);
         color: white;
     }
-
     .SidebarContent_Title {
         font-weight: bold;
         display: flex;
         justify-content: center;
     }
-
     .SidebarContent_Table {
         width: 345px;
         margin-top: 5px;
