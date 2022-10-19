@@ -11,9 +11,9 @@ import './App.scss'
 
 function App() {
   const drinks = useRecoilValue(drinkData)
-  let [showHome, setShowHome] = useState(false);
+  let [showHome, setShowHome] = useState(true);
   let [showFood, setShowFood] = useState(false);
-  let [showDrink, setShowDrink] = useState(true);
+  let [showDrink, setShowDrink] = useState(false);
   let [showSales, setShowSales] = useState(false);
   let [showDessert, setShowDessert] = useState(false);
   const resetDrinkState = useResetRecoilState(drinkData)
