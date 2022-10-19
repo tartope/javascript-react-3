@@ -1,20 +1,34 @@
 import { useRecoilState } from 'recoil'
 import { showSideDrawer } from './Util/Atoms'
+import { useRecoilValue } from 'recoil'
+import { drinkData } from './Util/Atoms' 
 import './Header.scss'
 
 export const Header = () => {
-    const [, setShowSideDrawer] = useRecoilState(showSideDrawer);
+    const [, setShowSideDrawer] = useRecoilState(showSideDrawer)
+    let theDrinkData = useRecoilValue(drinkData) 
+
+
+    const getQuantity = () => {
+        return 1
+        // return parseInt(theDrinkData.tea) + parseInt(theDrinkData.coffee) + parseInt(theDrinkData.lemonade)
+    }
 
     return (
         <div className="Header">
             <div>
-                <img className="App_hamburger" onClick={() => setShowSideDrawer(true)} src="hamburger.png" alt="menu"></img>
+                <img className="Header_hamburger" onClick={() => setShowSideDrawer(true)} src="hamburger.png" alt="menu"></img>
                 </div>
-                <div className="App_logo_area">
-                <div className="App_logo">The Coffee Place</div>
+                <div className="Header_logo_area">
+                <div className="Header_logo">The Coffee Place</div>
                 <div>
                     <img width="40px" src="shopping-cart.png" alt="shopping cart"/>
-                    <div className="App_qty">1</div>
+                    {
+                        getQuantity() > 0 && 
+                        <div className="Header_qty">
+                            {getQuantity()}
+                        </div>
+                    }
                 </div>
             </div>
         </div>

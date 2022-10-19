@@ -8,12 +8,12 @@ import Offcanvas from 'react-bootstrap/Offcanvas'
 import './App.scss'
 
 function App() {
-  const [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
   let [showHome, setShowHome] = useState(true);
   let [showFood, setShowFood] = useState(false);
   let [showDrink, setShowDrink] = useState(false);
-  let [showDessert, setShowDessert] = useState(false);
   let [showSales, setShowSales] = useState(false);
+  let [showDessert, setShowDessert] = useState(false);
+  const [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
 
   const onHandleLink = (page) => {
     setShowHome(false)
