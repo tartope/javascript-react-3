@@ -27,7 +27,7 @@ export const Header = () => {
                 </div>
                 <div className="Header_logo_area">
                 <div className="Header_logo">The Coffee Place</div>
-                <div className="Header_cart">
+                <div className="Header_cart" onClick={() => setShowSideDrawer(true)}>
                     <img width="40px" src="shopping-cart.png" alt="shopping cart"/>
                     <div className={getClassName()}>{getQuantity()}</div>
                 </div>
