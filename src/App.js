@@ -49,7 +49,7 @@ function App() {
         break;
       default:
     }
-    setShowSideDrawer(false) // Close the sidebar.
+    setShowSideDrawer(false)
   }
 
   const onHandleCheckout = (total, completedOrder) => {
