@@ -6,11 +6,8 @@ import './OrderHistoryPage.scss'
 export const OrderHistoryPage = () => {
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
     const orders = localStorageProxy.getOrders()
-    let total = 0
-    if (orders) {
-        total = orders.map(i=> i.total).reduce((a,b)=> a+b, 0)
-    }
-
+    const total = (orders) ? orders.map(i => i.total).reduce((a,b)=> a + b, 0) : 0
+    
     return (
         <div className = "OrderHistoryPage">
             <div className = "OrderHistoryPage_Header">
@@ -24,7 +21,7 @@ export const OrderHistoryPage = () => {
             {   
                 orders && 
                 orders.map(i => {
-                    return <div key={i.id}>Order: {i.id} <br /> Date: {i.date} <br /> Total: {formatter.format(i.total)}
+                    return <div key={i.id}>Order: {i.id} <br /> Date: {i.date} <br />Total: {formatter.format(i.total)}
                         <br/>
                         {
                             i.items.map(k => {
