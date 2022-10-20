@@ -1,6 +1,6 @@
 import { Header } from './Header'
 import { Content } from './Content'
-import { drinkData } from './Util/Atoms'
+import { orderedDrinks } from './Util/Atoms'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import { showSideDrawer } from './Util/Atoms'
@@ -18,7 +18,7 @@ function App() {
   let [showSales, setShowSales] = useState(false)
   let [showModal, setShowModal] = useState(false)
   let [showDessert, setShowDessert] = useState(false)
-  const resetDrinkState = useResetRecoilState(drinkData)
+  const resetDrinkState = useResetRecoilState(orderedDrinks)
   let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer)
 
   useEffect(() => {

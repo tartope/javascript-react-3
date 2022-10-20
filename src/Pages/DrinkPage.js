@@ -2,14 +2,14 @@ import { Footer } from '../Footer'
 import React, { useRef } from 'react'
 import { useRecoilState } from 'recoil'
 import Image from 'react-bootstrap/Image'
-import { drinkData } from '../Util/Atoms'
+import { orderedDrinks } from '../Util/Atoms'
 import { formatUSD } from '../Util/Money'
 import * as AppConfig from '../Util/App.Config'
 import './DrinkPage.scss'
 
 export const DrinkPage = () => {
     const inputRef = useRef(null)
-    let [theDrinks, setTheDrinks] = useRecoilState(drinkData)
+    let [theDrinks, setTheDrinks] = useRecoilState(orderedDrinks)
 
     //
     // Input text change...

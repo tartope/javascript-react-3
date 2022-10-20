@@ -1,12 +1,12 @@
 import { useRecoilState } from 'recoil'
 import { useRecoilValue } from 'recoil'
-import { drinkData } from './Util/Atoms' 
+import { orderedDrinks } from './Util/Atoms' 
 import { showSideDrawer } from './Util/Atoms'
 import './Header.scss'
 
 export const Header = () => {
     const [, setShowSideDrawer] = useRecoilState(showSideDrawer)
-    const drinks = useRecoilValue(drinkData) 
+    const drinks = useRecoilValue(orderedDrinks) 
 
     const getQuantity = () => {
         let totalDrinks = (drinks.tea + drinks.coffee + drinks.lemonade)
