@@ -8,7 +8,7 @@
 import { atom } from 'recoil'
 
 //
-// Access: 
+// Component access: 
 //   Read/Write:
 //     App
 //     DrinkPage
@@ -28,13 +28,13 @@ export const orderedDrinks = atom({
 })
 
 //
-// Access: 
+// Component access: 
 //   Read/Write:
 //     App
 //   Write:
 //     Header
 // Desc:
-//  Used to show and hide the offcanvas sidedrawer.
+//  Shows and hides the offcanvas sidedrawer.
 //
 export const showSideDrawer = atom({
     key: 'showSideDrawer',
