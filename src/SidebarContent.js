@@ -1,6 +1,7 @@
 import { useRecoilValue } from 'recoil'
 import { drinkData } from './Util/Atoms'
 import { buildOrder } from './Util/Order'
+import { formatUSD } from './Util/Money'
 import Button from 'react-bootstrap/Button'
 import { SidebarOrderTable } from './SidebarOrderTable'
 import './SidebarContent.scss'
@@ -8,9 +9,7 @@ import './SidebarContent.scss'
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
     const drinks = useRecoilValue(drinkData)
     let {order, total} = buildOrder(drinks)
-
-    const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
-
+    
     const isDisabled = () => {
         return (total > 0) ? false : true
     }
@@ -54,7 +53,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
             }
             <hr />
             <div className='SidebarContent_Total'>
-                Total:<span>{ formatter.format(total)}</span>
+                Total:<span>{ formatUSD(total)}</span>
             </div>
             <hr />
             <div className='SidebarContent_Checkout'>

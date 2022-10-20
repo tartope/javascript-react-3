@@ -3,13 +3,13 @@ import React, { useRef } from 'react'
 import { useRecoilState } from 'recoil'
 import Image from 'react-bootstrap/Image'
 import { drinkData } from '../Util/Atoms'
+import { formatUSD } from '../Util/Money'
 import * as AppConfig from '../Util/App.Config'
 import './DrinkPage.scss'
 
 export const DrinkPage = () => {
     const inputRef = useRef(null)
     let [theDrinkData, setTheDrinkData] = useRecoilState(drinkData)
-    const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
 
     //
     // Input text change...
@@ -89,7 +89,7 @@ export const DrinkPage = () => {
                     <tbody>
                         <tr>
                             <td>Lemonade</td>
-                            <td>{ formatter.format(AppConfig.prices.filter(i=>i.type === "lemonade")[0].price) }</td>
+                            <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "lemonade")[0].price) }</td>
                             <td>x</td>
                             <td><input value={theDrinkData.lemonade} ref={inputRef} onChange={(e) => onHandleLemonadeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                             <td>
@@ -99,7 +99,7 @@ export const DrinkPage = () => {
                         </tr>
                         <tr>
                             <td>Tea</td>
-                            <td>{ formatter.format(AppConfig.prices.filter(i=>i.type === "tea")[0].price) }</td>
+                            <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "tea")[0].price) }</td>
                             <td>x</td>
                             <td><input value={theDrinkData.tea} ref={inputRef} onChange={(e) => onHandleTeaChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                             <td>
@@ -109,7 +109,7 @@ export const DrinkPage = () => {
                         </tr>
                         <tr>
                             <td>Coffee</td>
-                            <td>{ formatter.format(AppConfig.prices.filter(i=>i.type === "coffee")[0].price) }</td>
+                            <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "coffee")[0].price) }</td>
                             <td>x</td>
                             <td><input value={theDrinkData.coffee} ref={inputRef} onChange={(e) => onHandleCoffeeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                             <td>

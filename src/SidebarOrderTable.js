@@ -1,8 +1,8 @@
 import React from 'react'
+import { formatUSD } from './Util/Money'
 import './SidebarOrderTable.scss'
 
 export const SidebarOrderTable = ({completeOrder}) => {
-    const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
     const capitalize = (s) => {
         if (typeof s !== 'string') return ''
         return s.charAt(0).toUpperCase() + s.slice(1)
@@ -25,8 +25,8 @@ export const SidebarOrderTable = ({completeOrder}) => {
                             return <tr key={ i.item }>
                                         <td>{ capitalize(i.item) }</td>
                                         <td>{ i.qty }</td>
-                                        <td>{ formatter.format(i.price) } {' '}ea</td>
-                                        <td>{ formatter.format(i.subTotal) }</td>
+                                        <td>{ formatUSD(i.price) } {' '}ea</td>
+                                        <td>{ formatUSD(i.subTotal) }</td>
                                     </tr>
                         })
                     }
