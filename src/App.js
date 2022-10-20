@@ -24,7 +24,7 @@ function App() {
     localStorageProxy.initLocalStorageProxy()
   }, [])
 
-  const onHandleLink = (page) => {
+  const onHandleNavSelect = (page) => {
     setShowHome(false)
     setShowFood(false)
     setShowDrink(false)
@@ -75,7 +75,7 @@ function App() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <SidebarContent 
-              onHandleLink={(page) => onHandleLink(page)}
+              onHandleLink={(page) => onHandleNavSelect(page)}
               onHandleCheckout={(totalPrice, order) => onHandleCheckout(totalPrice, order)}
             />
           </Offcanvas.Body>
