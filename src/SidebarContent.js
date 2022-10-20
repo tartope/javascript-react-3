@@ -7,13 +7,8 @@ import Button from 'react-bootstrap/Button'
 import './SidebarContent.scss'
 
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
-    const drinks = useRecoilValue(drinkData)
-    let {order, total} = buildOrder(drinks)
+    let {order, total} = buildOrder(useRecoilValue(drinkData))
 
-    const isDisabled = () => {
-        return (total > 0) ? false : true
-    }
-    
     return (
         <div className='SidebarContent'>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Home")}>
@@ -57,7 +52,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
             </div>
             <hr />
             <div className='SidebarContent_Checkout'>
-                <Button disabled={isDisabled()} variant="primary" onClick={() => onHandleCheckout(total, order)}>Checkout</Button>
+                <Button disabled={(total > 0) ? false : true} variant="primary" onClick={() => onHandleCheckout(total, order)}>Checkout</Button>
             </div>
         </div>
     )
