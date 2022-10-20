@@ -9,42 +9,42 @@ import './DrinkPage.scss'
 
 export const DrinkPage = () => {
     const inputRef = useRef(null)
-    let [theDrinkData, setTheDrinkData] = useRecoilState(drinkData)
+    let [theDrinks, setTheDrinks] = useRecoilState(drinkData)
 
     //
     // Input text change...
     //
 
     const onHandleLemonadeChange = (qty) => {
-        let drinkData = {...theDrinkData}
+        let drinkData = {...theDrinks}
         drinkData.lemonade = qty  
         if (qty) {
-            setTheDrinkData(drinkData)
+            setTheDrinks(drinkData)
         } else {
             drinkData.lemonade = 0 
-            setTheDrinkData(drinkData)
+            setTheDrinks(drinkData)
         }
     }
 
     const onHandleTeaChange = (qty) => {
-        let drinkData = {...theDrinkData}
+        let drinkData = {...theDrinks}
         drinkData.tea = qty  
         if (qty) {
-            setTheDrinkData(drinkData)
+            setTheDrinks(drinkData)
         } else {
             drinkData.tea = 0
-            setTheDrinkData(drinkData)
+            setTheDrinks(drinkData)
         }
     }
 
     const onHandleCoffeeChange = (qty) => {
-        let drinkData = {...theDrinkData}
+        let drinkData = {...theDrinks}
         drinkData.coffee = qty  
         if (qty) {
-            setTheDrinkData(drinkData)
+            setTheDrinks(drinkData)
         } else {
             drinkData.coffee = 0
-            setTheDrinkData(drinkData)
+            setTheDrinks(drinkData)
         }
     }
 
@@ -53,30 +53,30 @@ export const DrinkPage = () => {
     //
 
     const onHandleLemonadeClick = (value) => {
-        let drinkData = {...theDrinkData}
+        let drinkData = {...theDrinks}
         if (value === -1 && drinkData.lemonade === 0) {
             return;
         }
         drinkData.lemonade = drinkData.lemonade + value  
-        setTheDrinkData(drinkData)
+        setTheDrinks(drinkData)
     }
 
     const onHandleTeaClick = (value) => {
-        let drinkData = {...theDrinkData}
+        let drinkData = {...theDrinks}
         if (value === -1 && drinkData.tea === 0) {
             return;
         }
         drinkData.tea = drinkData.tea + value  
-        setTheDrinkData(drinkData)
+        setTheDrinks(drinkData)
     }
 
     const onHandleCoffeeClick = (value) => {
-        let drinkData = {...theDrinkData}
+        let drinkData = {...theDrinks}
         if (value === -1 && drinkData.coffee === 0) {
             return;
         }
         drinkData.coffee = drinkData.coffee + value  
-        setTheDrinkData(drinkData)
+        setTheDrinks(drinkData)
     }
 
     return (
@@ -91,7 +91,7 @@ export const DrinkPage = () => {
                             <td>Lemonade</td>
                             <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "lemonade")[0].price) }</td>
                             <td>x</td>
-                            <td><input value={theDrinkData.lemonade} ref={inputRef} onChange={(e) => onHandleLemonadeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
+                            <td><input value={theDrinks.lemonade} ref={inputRef} onChange={(e) => onHandleLemonadeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                             <td>
                                 <button className="DrinkPage_Button" onClick={() => onHandleLemonadeClick(1)}>+</button>
                                 <button className="DrinkPage_Button" onClick={() => onHandleLemonadeClick(-1)}>-</button>
@@ -101,7 +101,7 @@ export const DrinkPage = () => {
                             <td>Tea</td>
                             <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "tea")[0].price) }</td>
                             <td>x</td>
-                            <td><input value={theDrinkData.tea} ref={inputRef} onChange={(e) => onHandleTeaChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
+                            <td><input value={theDrinks.tea} ref={inputRef} onChange={(e) => onHandleTeaChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                             <td>
                                 <button className="DrinkPage_Button" onClick={() => onHandleTeaClick(1)}>+</button>
                                 <button className="DrinkPage_Button" onClick={() => onHandleTeaClick(-1)}>-</button>
@@ -111,7 +111,7 @@ export const DrinkPage = () => {
                             <td>Coffee</td>
                             <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "coffee")[0].price) }</td>
                             <td>x</td>
-                            <td><input value={theDrinkData.coffee} ref={inputRef} onChange={(e) => onHandleCoffeeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
+                            <td><input value={theDrinks.coffee} ref={inputRef} onChange={(e) => onHandleCoffeeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
                             <td>
                                 <button className="DrinkPage_Button" onClick={() => onHandleCoffeeClick(1)}>+</button>
                                 <button className="DrinkPage_Button" onClick={() => onHandleCoffeeClick(-1)}>-</button>
