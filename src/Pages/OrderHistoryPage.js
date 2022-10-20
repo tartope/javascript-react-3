@@ -1,8 +1,8 @@
 import React from 'react'
 import { Footer } from '../Footer'
+import { formatUSD } from '../Util/Money'
 import { SidebarOrderTable } from '../SidebarOrderTable'
 import * as localStorageProxy from '../Util/LocalStorageProxy'
-import { formatUSD } from '../Util/Money'
 import './OrderHistoryPage.scss'
 
 export const OrderHistoryPage = () => {
