@@ -58,6 +58,7 @@ test('Order data structure', () => {
   }
   const {total, order} = buildOrder(customerDrinkOrder)
   /*
+    order array:
     [
       { 
         item: 'tea', 
