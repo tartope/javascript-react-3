@@ -119,7 +119,6 @@ export const DrinkPage = () => {
                         </tr>
                     </tbody>
                 </table>
-               
             </div>
             <div className = "DrinkPage_Content">
                 <div className = "DrinkPage_Pix">
