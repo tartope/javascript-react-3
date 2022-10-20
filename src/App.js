@@ -2,6 +2,8 @@ import { Header } from './Header'
 import { Content } from './Content'
 import React, { useEffect, useState } from 'react'
 import { drinkData } from './Util/Atoms'
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
 import { showSideDrawer } from './Util/Atoms'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { SidebarContent } from './SidebarContent'
@@ -10,11 +12,12 @@ import * as localStorageProxy from './Util/LocalStorageProxy'
 import './App.scss'
 
 function App() {
-  let [showHome, setShowHome] = useState(true);
-  let [showFood, setShowFood] = useState(false);
-  let [showDrink, setShowDrink] = useState(false);
-  let [showSales, setShowSales] = useState(false);
-  let [showDessert, setShowDessert] = useState(false);
+  let [showHome, setShowHome] = useState(true)
+  let [showFood, setShowFood] = useState(false)
+  let [showDrink, setShowDrink] = useState(false)
+  let [showSales, setShowSales] = useState(false)
+  let [showModal, setShowModal] = useState(false)
+  let [showDessert, setShowDessert] = useState(false)
   const resetDrinkState = useResetRecoilState(drinkData)
   let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
 
@@ -58,6 +61,7 @@ function App() {
       date: new Date().toISOString().slice(0, 10)
     })
     localStorageProxy.setOrders(orders)
+    setShowModal(true)
     resetDrinkState()
   }
 
@@ -84,6 +88,15 @@ function App() {
           showDessert={showDessert} 
           showSales={showSales} 
         />
+        <Modal show={showModal} onHide={() => setShowModal(false)}>
+          <Modal.Header closeButton>
+            <Modal.Title>The Coffee Shop</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Thank you for your order!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={() => setShowModal(false)}>Close</Button>
+          </Modal.Footer>
+        </Modal>
     </div>
   );
 }
