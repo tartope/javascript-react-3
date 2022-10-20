@@ -9,6 +9,7 @@ React web application that uses Recoil and React Bootstrap to implement a client
 - Start the app: `npm start`
 
 # Deployment
+- Run tests: `npm run test`
 - Execute: `/devops/build-deploy.bat`
 
 # Global State Diagram

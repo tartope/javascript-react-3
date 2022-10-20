@@ -67,7 +67,6 @@ test('Order data structure', () => {
       }
     ]
   */
-  expect(order.length).toBe(1);
   expect(order[0].item).toBe('tea');
   expect(order[0].qty).toBe(1);
   expect(order[0].price).toBe(2);
