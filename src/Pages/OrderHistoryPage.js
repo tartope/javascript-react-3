@@ -1,5 +1,6 @@
 import React from 'react'
 import { Footer } from '../Footer'
+import { SidebarOrderTable } from '../SidebarOrderTable'
 import * as localStorageProxy from '../Util/LocalStorageProxy'
 import './OrderHistoryPage.scss'
 
@@ -25,11 +26,7 @@ export const OrderHistoryPage = () => {
                         Order: {i.id}  <br /> 
                         Date:  {i.date}<br />
                         Total: {formatter.format(i.total)}<br/>
-                        {
-                            i.items.map(k => {
-                                return <div key={k.item}>&nbsp;&nbsp;&nbsp;{k.item} {k.qty} {formatter.format(k.price)} {formatter.format(k.subTotal)}</div>
-                            })
-                        }
+                        <SidebarOrderTable completeOrder={i.items}/>
                         <hr />
                     </div>
                 })
