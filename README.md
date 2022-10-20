@@ -11,8 +11,8 @@ React web application that uses Recoil and React Bootstrap to implement a client
 # Deployment
 - Execute: `/devops/build-deploy.bat`
 
-# Architecture 
-![](./docs/overview.png)
+# Global State 
+![](./docs/global-state-diagram.png)
 
 # Links
 - [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
