@@ -1,6 +1,9 @@
-// export const lemonadePrice = 1.00;
-// export const teaPrice = 2.00;
-// export const coffeePrice = 3.00;
+// 
+// File: App.Config.js
+// Auth: Martin Burolla
+// Date: 10/19/2022
+// Desc: All configuration options for the application.
+//
 
 export const prices = [
     { 
