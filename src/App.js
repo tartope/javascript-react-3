@@ -90,7 +90,7 @@ function App() {
         />
         <Modal show={showModal} onHide={() => setShowModal(false)}>
           <Modal.Header closeButton>
-            <Modal.Title>The Coffee Shop</Modal.Title>
+            <Modal.Title>The Coffee Place</Modal.Title>
           </Modal.Header>
           <Modal.Body>Thank you for your order!</Modal.Body>
           <Modal.Footer>

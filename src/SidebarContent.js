@@ -10,7 +10,11 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
     let {order, total} = buildOrder(drinks)
 
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
- 
+
+    const isDisabled = () => {
+        return (total > 0) ? false : true
+    }
+    
     return (
         <div className='SidebarContent'>
             <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Home")}>
@@ -54,7 +58,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
             </div>
             <hr />
             <div className='SidebarContent_Checkout'>
-                <Button variant="primary" onClick={() => onHandleCheckout(total, order)}>Checkout</Button>
+                <Button disabled={isDisabled()} variant="primary" onClick={() => onHandleCheckout(total, order)}>Checkout</Button>
             </div>
         </div>
     )
