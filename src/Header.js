@@ -9,11 +9,12 @@ export const Header = () => {
     const drinks = useRecoilValue(orderedDrinks) 
 
     const getQuantity = () => {
-        let totalDrinks = (drinks.tea + drinks.coffee + drinks.lemonade)
+        const totalDrinks = (drinks.tea + drinks.coffee + drinks.lemonade)
         return totalDrinks
     }
 
     const getClassName = () => {
+        // Use a different class for larger orders.
         if (getQuantity() < 9) {
           return "Header_qty_1"
         } else {
