@@ -4,6 +4,7 @@ React project that uses Recoil and React Bootstrap to implement a client side sh
 # Getting Started
 - Clone this repo
 - Install dependencies: `npm install`
+- Start the app: `npm start`
 
 # Deployment
 - Execute: `/devops/build-deploy.bat`
