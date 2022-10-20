@@ -1,5 +1,5 @@
 //
-// File: atoms.js
+// File: Atoms.js
 // Auth: Martin Burolla
 // Date: 10/14/2022
 // Desc: Contains all global state for the application.
@@ -8,12 +8,15 @@
 import { atom } from 'recoil'
 
 //
-// Usage: 
-//  DrinkPage (read/write)
-//  SalesPage (read)
-//  App (read)
+// Access: 
+//   Read/Write:
+//     App
+//     DrinkPage
+//   Read:
+//     Header
+//     SideBarContent
 // Desc:
-//  Stores the drinks that the customer can order.
+//   Stores the drinks that the customer has ordered.
 //
 export const drinkData = atom({
     key: 'drinkData',
@@ -25,9 +28,11 @@ export const drinkData = atom({
 })
 
 //
-// Usage: 
-//  Header (write)
-//  App (read/write)
+// Access: 
+//   Read/Write:
+//     App
+//   Write:
+//     Header
 // Desc:
 //  Used to show and hide the offcanvas sidedrawer.
 //
