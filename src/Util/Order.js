@@ -9,8 +9,9 @@ import { getPriceForDrink } from './App.Config'
 
 export const buildOrder = (drinks) => {
     let total = 0
-    let d = Object.keys(drinks)
-    const purchasedItems = d.map(i => {
+    let arrayOfDrinks = Object.keys(drinks)
+    
+    const purchasedItems = arrayOfDrinks.map(i => {
         return {
             type: i,
             qty: drinks[i]
@@ -26,7 +27,9 @@ export const buildOrder = (drinks) => {
             subTotal: i.qty * getPriceForDrink(i.type)
         }
     })
+
     order = order.filter(i=> i.qty > 0)
+
     return {
         order,
         total
