@@ -9,8 +9,6 @@ import { OrderSection } from './OrderSection'
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
     const {order, total} = buildOrder(useRecoilValue(orderedDrinks)) 
 
-    console.log(order)
-    
     return (
         <div className='SidebarContent'>
             <SidebarMenu onHandleLink={(page) => onHandleLink(page)}/>
