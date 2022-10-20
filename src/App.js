@@ -1,9 +1,8 @@
 import { Header } from './Header'
 import { Content } from './Content'
 import { orderedDrinks } from './Util/Atoms'
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
 import { showSideDrawer } from './Util/Atoms'
+import { ModalCheckout } from './ModalCheckout'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { SidebarContent } from './SidebarContent'
 import React, { useEffect, useState } from 'react'
@@ -88,15 +87,7 @@ function App() {
           showSales={showSales} 
           showDessert={showDessert} 
         />
-        <Modal show={showModal} onHide={() => setShowModal(false)}>
-          <Modal.Header closeButton>
-            <Modal.Title>The Coffee Place</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Thank you for your order!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="primary" onClick={() => setShowModal(false)}>Close</Button>
-          </Modal.Footer>
-        </Modal>
+        <ModalCheckout showModal={showModal} setShowModal={() => setShowModal(false)}/>
     </div>
   );
 }
