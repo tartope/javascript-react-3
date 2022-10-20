@@ -6,20 +6,20 @@ import './DrinkPage.scss'
 
 export const DrinkPage = () => {
     return (
-        <div className = "DrinkPage">
-            <div className = "DrinkPage_Header">
+        <div className='DrinkPage'>
+            <div className='DrinkPage_Header'>
                 Drinks
             </div>
-            <div className = "DrinkPage_Content">
+            <div className='DrinkPage_Content'>
                 <DrinksTable />
             </div>
-            <div className = "DrinkPage_Content">
-                <div className = "DrinkPage_Pix">
-                    <Image width="800px" rounded={true} fluid={true} src="coffee.jpg" alt="coffee" />
+            <div className='DrinkPage_Content'>
+                <div className='DrinkPage_Pix'>
+                    <Image width='800px' rounded={true} fluid={true} src='coffee.jpg' alt='coffee' />
                     <br /><br />
-                    <Image width="800px" rounded={true} fluid={true} src="tea.jpg" alt="coffee" />
+                    <Image width='800px' rounded={true} fluid={true} src='tea.jpg' alt='tea' />
                     <br /><br />
-                    <Image width="800px" rounded={true} fluid={true} src="lemonade.jpg" alt="coffee" />
+                    <Image width='800px' rounded={true} fluid={true} src='lemonade.jpg' alt='lemonade' />
                 </div>
             </div>
             <Footer />

@@ -4,8 +4,8 @@ import './FoodPage.scss'
 
 export const FoodPage = () => {
   return (
-    <div className = "FoodPage">
-        <div className = "FoodPage_Header">
+    <div className='FoodPage'>
+        <div className='FoodPage_Header'>
             Food 
         </div>
         <div>

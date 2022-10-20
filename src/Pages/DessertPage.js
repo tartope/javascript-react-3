@@ -5,7 +5,7 @@ import './DessertPage.scss'
 export const DessertPage = () => {
   return (
     <div className='DessertPage'>
-        <div className = "DessertPage_Header">
+        <div className='DessertPage_Header'>
             Dessert 
         </div>
         <div>

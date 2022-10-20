@@ -10,15 +10,15 @@ export const OrderHistoryPage = () => {
     const total = (orders) ? orders.map(i => i.total).reduce((a,b)=> a + b, 0) : 0
     
     return (
-        <div className = "OrderHistoryPage">
-            <div className = "OrderHistoryPage_Header">
+        <div className='OrderHistoryPage'>
+            <div className='OrderHistoryPage_Header'>
                 Order History
             </div>
-            <div className="OrderHistoryPage_Content">
+            <div className='OrderHistoryPage_Content'>
                 Grand Total: {formatUSD(total)} <br />
                 Total Number of Orders: {orders && orders.length}
             </div>
-            <div className="OrderHistoryPage_Content">
+            <div className='OrderHistoryPage_Content'>
             {   
                 orders && 
                 orders.map(i => {
