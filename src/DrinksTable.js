@@ -37,37 +37,37 @@ export const DrinksTable = () => {
     }
 
     return (
-        <div className="DrinksTable">
-            <table className = "DrinkTable_Table">
+        <div className='DrinksTable'>
+            <table className='DrinkTable_Table'>
                 <tbody>
                     <tr>
                         <td>Lemonade</td>
-                        <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "lemonade")[0].price) }</td>
+                        <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === 'lemonade')[0].price) }</td>
                         <td>x</td>
-                        <td><input value={theDrinks.lemonade} readOnly={true} ref={inputRef} className = "DrinkTable_Input"></input></td>
+                        <td><input value={theDrinks.lemonade} readOnly={true} ref={inputRef} className='DrinkTable_Input'></input></td>
                         <td>
-                            <button className="DrinkTable_Button" onClick={() => onHandleLemonadeClick(1)}>+</button>
-                            <button className="DrinkTable_Button" onClick={() => onHandleLemonadeClick(-1)}>-</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleLemonadeClick(1)}>+</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleLemonadeClick(-1)}>-</button>
                         </td>
                     </tr>
                     <tr>
                         <td>Tea</td>
-                        <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "tea")[0].price) }</td>
+                        <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === 'tea')[0].price) }</td>
                         <td>x</td>
-                        <td><input value={theDrinks.tea} readOnly={true} ref={inputRef} className = "DrinkTable_Input"></input></td>
+                        <td><input value={theDrinks.tea} readOnly={true} ref={inputRef} className='DrinkTable_Input'></input></td>
                         <td>
-                            <button className="DrinkTable_Button" onClick={() => onHandleTeaClick(1)}>+</button>
-                            <button className="DrinkTable_Button" onClick={() => onHandleTeaClick(-1)}>-</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleTeaClick(1)}>+</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleTeaClick(-1)}>-</button>
                         </td>
                     </tr>
                     <tr>
                         <td>Coffee</td>
-                        <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "coffee")[0].price) }</td>
+                        <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === 'coffee')[0].price) }</td>
                         <td>x</td>
-                        <td><input value={theDrinks.coffee} readOnly={true} ref={inputRef} className = "DrinkTable_Input"></input></td>
+                        <td><input value={theDrinks.coffee} readOnly={true} ref={inputRef} className='DrinkTable_Input'></input></td>
                         <td>
-                            <button className="DrinkTable_Button" onClick={() => onHandleCoffeeClick(1)}>+</button>
-                            <button className="DrinkTable_Button" onClick={() => onHandleCoffeeClick(-1)}>-</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleCoffeeClick(1)}>+</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleCoffeeClick(-1)}>-</button>
                         </td>
                     </tr>
                 </tbody>
