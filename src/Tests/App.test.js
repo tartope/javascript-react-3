@@ -9,54 +9,54 @@
 import { buildOrder } from '../Util/Order'
 
 test('Order 1 lemonade', () => {
-  let customerDrinkOrder = {
+  const customerDrinkOrder = {
       tea: 0,
       coffee: 0,
       lemonade: 1
   }
-  let {total} = buildOrder(customerDrinkOrder)
+  const {total} = buildOrder(customerDrinkOrder)
   expect(total).toBe(1);
 });
 
 test('Order 1 tea', () => {
-  let customerDrinkOrder = {
+  const customerDrinkOrder = {
       tea: 1,
       coffee: 0,
       lemonade: 0
   }
-  let {total} = buildOrder(customerDrinkOrder)
+  const {total} = buildOrder(customerDrinkOrder)
   expect(total).toBe(2);
 });
 
 test('Order 1 coffee', () => {
-  let customerDrinkOrder = {
+  const customerDrinkOrder = {
       tea: 0,
       coffee: 1,
       lemonade: 0
   }
-  let {total} = buildOrder(customerDrinkOrder)
+  const {total} = buildOrder(customerDrinkOrder)
   expect(total).toBe(3);
 });
 
 test('Order a bunch of drinks', () => {
-  let customerDrinkOrder = {
+  const customerDrinkOrder = {
       tea: 3,
       coffee: 4,
       lemonade: 2
   }
-  let {total} = buildOrder(customerDrinkOrder)
+  const {total} = buildOrder(customerDrinkOrder)
   expect(total).toBe(20);
 });
 
 //
 
 test('Order data structure', () => {
-  let customerDrinkOrder = {
+  const customerDrinkOrder = {
       tea: 1,
       coffee: 0,
       lemonade: 0
   }
-  let {total, order} = buildOrder(customerDrinkOrder)
+  const {total, order} = buildOrder(customerDrinkOrder)
   /*
     [
       { 
