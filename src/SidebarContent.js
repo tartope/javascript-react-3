@@ -7,7 +7,7 @@ import './SidebarContent.scss'
 import { OrderSection } from './OrderSection'
 
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
-    let {order, total} = buildOrder(useRecoilValue(orderedDrinks))
+    const {order, total} = buildOrder(useRecoilValue(orderedDrinks)) 
 
     return (
         <div className='SidebarContent'>
