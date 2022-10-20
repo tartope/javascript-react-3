@@ -10,15 +10,15 @@ import { getPriceForDrink } from './App.Config'
 export const buildOrder = (drinks) => {
     let total = 0
     let arrayOfDrinks = Object.keys(drinks)
-    
-    const purchasedItems = arrayOfDrinks.map(i => {
+
+    const arrayOfDrinkObjects = arrayOfDrinks.map(i => {
         return {
             type: i,
             qty: drinks[i]
         }
     })
 
-    let order = purchasedItems.map(i => {
+    const allItems = arrayOfDrinkObjects.map(i => {
         total += i.qty * getPriceForDrink(i.type)
         return {
             item: i.type,
@@ -28,7 +28,7 @@ export const buildOrder = (drinks) => {
         }
     })
 
-    order = order.filter(i=> i.qty > 0)
+    const order = allItems.filter(i => i.qty > 0)
 
     return {
         order,
