@@ -19,3 +19,7 @@ export const prices = [
         price: 3.00 
     }
 ]
+
+export const getPriceForDrink = (type) => {
+    return prices.filter(p=>p.type === type)[0].price
+}

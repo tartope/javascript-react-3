@@ -5,11 +5,7 @@
 // Desc: The one and only place where the customer order is calculated.
 //
 
-import * as AppConfig from './App.Config'
-
-const getPriceForDrink = (type) => {
-    return AppConfig.prices.filter(p=>p.type === type)[0].price
-}
+import { getPriceForDrink } from './App.Config'
 
 export const buildOrder = (drinks) => {
     let total = 0

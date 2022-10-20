@@ -9,30 +9,12 @@ export const DrinksTable = () => {
     const inputRef = useRef(null)
     let [theDrinks, setTheDrinks] = useRecoilState(orderedDrinks)
 
-    const onHandleLemonadeClick = (value) => {
+    const onHandleClick = (item, value) => {
         let drinkData = {...theDrinks}
-        if (value === -1 && drinkData.lemonade === 0) {
+        if (value === -1 && drinkData[item] === 0) {
             return;
         }
-        drinkData.lemonade += value  
-        setTheDrinks(drinkData)
-    }
-
-    const onHandleTeaClick = (value) => {
-        let drinkData = {...theDrinks}
-        if (value === -1 && drinkData.tea === 0) {
-            return;
-        }
-        drinkData.tea += value  
-        setTheDrinks(drinkData)
-    }
-
-    const onHandleCoffeeClick = (value) => {
-        let drinkData = {...theDrinks}
-        if (value === -1 && drinkData.coffee === 0) {
-            return;
-        }
-        drinkData.coffee += value  
+        drinkData[item] += value
         setTheDrinks(drinkData)
     }
 
@@ -42,32 +24,32 @@ export const DrinksTable = () => {
                 <tbody>
                     <tr>
                         <td>Lemonade</td>
-                        <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === 'lemonade')[0].price) }</td>
+                        <td>{ formatUSD(AppConfig.getPriceForDrink('lemonade')) }</td>
                         <td>x</td>
                         <td><input value={theDrinks.lemonade} readOnly={true} ref={inputRef} className='DrinkTable_Input'></input></td>
                         <td>
-                            <button className='DrinkTable_Button' onClick={() => onHandleLemonadeClick(1)}>+</button>
-                            <button className='DrinkTable_Button' onClick={() => onHandleLemonadeClick(-1)}>-</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleClick('lemonade', 1)}>+</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleClick('lemonade', -1)}>-</button>
                         </td>
                     </tr>
                     <tr>
                         <td>Tea</td>
-                        <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === 'tea')[0].price) }</td>
+                        <td>{ formatUSD(AppConfig.getPriceForDrink('tea')) }</td>
                         <td>x</td>
                         <td><input value={theDrinks.tea} readOnly={true} ref={inputRef} className='DrinkTable_Input'></input></td>
                         <td>
-                            <button className='DrinkTable_Button' onClick={() => onHandleTeaClick(1)}>+</button>
-                            <button className='DrinkTable_Button' onClick={() => onHandleTeaClick(-1)}>-</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleClick('tea', 1)}>+</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleClick('tea', -1)}>-</button>
                         </td>
                     </tr>
                     <tr>
                         <td>Coffee</td>
-                        <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === 'coffee')[0].price) }</td>
+                        <td>{ formatUSD(AppConfig.getPriceForDrink('coffee')) }</td>
                         <td>x</td>
                         <td><input value={theDrinks.coffee} readOnly={true} ref={inputRef} className='DrinkTable_Input'></input></td>
                         <td>
-                            <button className='DrinkTable_Button' onClick={() => onHandleCoffeeClick(1)}>+</button>
-                            <button className='DrinkTable_Button' onClick={() => onHandleCoffeeClick(-1)}>-</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleClick('coffee', 1)}>+</button>
+                            <button className='DrinkTable_Button' onClick={() => onHandleClick('coffee', -1)}>-</button>
                         </td>
                     </tr>
                 </tbody>
