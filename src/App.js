@@ -85,8 +85,8 @@ function App() {
           showHome={showHome} 
           showFood={showFood} 
           showDrink={showDrink}
-          showDessert={showDessert} 
           showSales={showSales} 
+          showDessert={showDessert} 
         />
         <Modal show={showModal} onHide={() => setShowModal(false)}>
           <Modal.Header closeButton>
