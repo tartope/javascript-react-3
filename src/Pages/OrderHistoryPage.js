@@ -5,7 +5,6 @@ import * as localStorageProxy from '../Util/LocalStorageProxy'
 import { formatUSD } from '../Util/Money'
 import './OrderHistoryPage.scss'
 
-
 export const OrderHistoryPage = () => {
     const orders = localStorageProxy.getOrders()
     const total = (orders) ? orders.map(i => i.total).reduce((a,b)=> a + b, 0) : 0
