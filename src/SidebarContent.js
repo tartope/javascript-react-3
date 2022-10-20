@@ -4,6 +4,7 @@ import { drinkData } from './Util/Atoms'
 import { buildOrder } from './Util/Order'
 import { OrderTable } from './OrderTable'
 import Button from 'react-bootstrap/Button'
+import { SidebarMenu } from './SidebarMenu'
 import './SidebarContent.scss'
 
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
@@ -11,27 +12,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
 
     return (
         <div className='SidebarContent'>
-            <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Home")}>
-                <div>Home</div>
-                <div><img width="20px" src="home-icon.png" alt="food" /></div>
-            </div>
-            <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Drink")}>
-                <div>Drink</div>
-                <div><img width="20px" src="coffee-icon.png" alt="food" /></div>
-            </div>
-            <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Food")}>
-                <div>Food</div>
-                <div><img width="20px" src="food-icon.png" alt="food" /></div>
-            </div>
-            <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Dessert")}>
-                <div>Dessert</div>
-                <div><img width="20px" src="cake-icon.png" alt="food" /></div>
-            </div>
-            <hr />
-            <div className='SidebarContent_NavItem' onClick={() => onHandleLink("Order History")}>
-                <div>Order History</div>
-                <div>$$$</div>
-            </div>
+            <SidebarMenu onHandleLink={(page) => onHandleLink(page)}/>
             <hr />
             <div className='SidebarContent_Title'>
                 Your Order

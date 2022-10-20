@@ -2,19 +2,6 @@
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(220, 190, 148);
-    .SidebarContent_NavItem {
-        background-color: rgb(255, 255, 255);
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 10px;
-        margin: 5px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .SidebarContent_NavItem:hover {
-        background-color: rgb(167, 100, 6);
-        color: white;
-    }
     .SidebarContent_Title {
         font-weight: bold;
         display: flex;

@@ -24,8 +24,8 @@ export const OrderHistoryPage = () => {
                 orders.map(i => {
                     return <div key={i.id}>
                         Order: {i.id}  <br /> 
-                        Date:  {i.date}<br />
                         Total: {formatUSD(i.total)}<br/>
+                        Date:  {i.date}<br />
                         <OrderTable completeOrder={i.items}/>
                         <hr />
                     </div>
