@@ -1,15 +1,15 @@
 import { useRecoilValue } from 'recoil'
+import { formatUSD } from './Util/Money'
 import { drinkData } from './Util/Atoms'
 import { buildOrder } from './Util/Order'
-import { formatUSD } from './Util/Money'
+import { OrderTable } from './OrderTable'
 import Button from 'react-bootstrap/Button'
-import { SidebarOrderTable } from './SidebarOrderTable'
 import './SidebarContent.scss'
 
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
     const drinks = useRecoilValue(drinkData)
     let {order, total} = buildOrder(drinks)
-    
+
     const isDisabled = () => {
         return (total > 0) ? false : true
     }
@@ -45,7 +45,7 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
                 total > 0 && 
                 <>
                     <strong>Drinks</strong>
-                    <SidebarOrderTable completeOrder={order}/>
+                    <OrderTable completeOrder={order}/>
                 </>
             }
             {

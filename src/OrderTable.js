@@ -1,16 +1,16 @@
 import React from 'react'
 import { formatUSD } from './Util/Money'
-import './SidebarOrderTable.scss'
+import './OrderTable.scss'
 
-export const SidebarOrderTable = ({completeOrder}) => {
+export const OrderTable = ({completeOrder}) => {
     const capitalize = (s) => {
         if (typeof s !== 'string') return ''
         return s.charAt(0).toUpperCase() + s.slice(1)
     }
 
     return (
-        <div className='SidebarOrderTable'>
-            <table className='SidebarOrderTable_Table'>
+        <div className='OrderTable'>
+            <table className='OrderTable_Table'>
                 <thead>
                     <tr>
                         <td>Item</td>
