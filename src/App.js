@@ -19,7 +19,7 @@ function App() {
   let [showModal, setShowModal] = useState(false)
   let [showDessert, setShowDessert] = useState(false)
   const resetDrinkState = useResetRecoilState(drinkData)
-  let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer);
+  let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer)
 
   useEffect(() => {
     localStorageProxy.initLocalStorageProxy()
@@ -34,19 +34,19 @@ function App() {
     switch (page) {
       case "Home":
         setShowHome(true)
-        break;
+        break
       case "Food":
         setShowFood(true)
-        break;
+        break
       case "Drink":
         setShowDrink(true)
-        break;
+        break
       case "Dessert":
         setShowDessert(true)
-        break;
+        break
       case "Order History":
         setShowSales(true)
-        break;
+        break
       default:
     }
     setShowSideDrawer(false)
