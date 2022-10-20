@@ -58,7 +58,7 @@ function App() {
       id: orders.length + 1,
       items: completedOrder,
       total: total,
-      date: new Date().toISOString().slice(0, 10)
+      date: new Date().toLocaleDateString()
     })
     localStorageProxy.setOrders(orders)
     setShowModal(true)
