@@ -11,7 +11,7 @@ import { atom } from 'recoil'
 // Component access: 
 //   Read/Write:
 //     App
-//     DrinkPage
+//     DrinkTable
 //   Read:
 //     Header
 //     SideBarContent
