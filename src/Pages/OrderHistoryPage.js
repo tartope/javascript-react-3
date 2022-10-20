@@ -1,9 +1,9 @@
 import React from 'react'
 import { Footer } from '../Footer'
 import * as localStorageProxy from '../Util/LocalStorageProxy'
-import './SalesPage.scss'
+import './OrderHistoryPage.scss'
 
-export const SalesPage = () => {
+export const OrderHistoryPage = () => {
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
     const orders = localStorageProxy.getOrders()
     let total = 0
@@ -12,15 +12,15 @@ export const SalesPage = () => {
     }
 
     return (
-        <div className = "SalesPage">
-            <div className = "SalesPage_Header">
+        <div className = "OrderHistoryPage">
+            <div className = "OrderHistoryPage_Header">
                 Order History
             </div>
-            <div className="SalesPage_Content">
+            <div className="OrderHistoryPage_Content">
                 Grand Total: {formatter.format(total)} <br />
                 Total Number of Orders: {orders && orders.length}
             </div>
-            <div className="SalesPage_Content">
+            <div className="OrderHistoryPage_Content">
             {   
                 orders && 
                 orders.map(i => {

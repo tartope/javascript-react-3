@@ -1,8 +1,8 @@
-.SalesPage {
+.OrderHistoryPage {
     background-color: rgb(129, 103, 69);
     padding: 5px;
 
-    .SalesPage_Header {
+    .OrderHistoryPage_Header {
         display: flex;
         justify-content: center;
         background-color: white;
@@ -10,7 +10,7 @@
         font-size: x-large;
         margin-bottom: 5px;
     }
-    .SalesPage_Content {
+    .OrderHistoryPage_Content {
         padding: 5px;
         background-color: white;
         border-radius: 5px;
