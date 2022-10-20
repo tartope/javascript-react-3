@@ -15,38 +15,8 @@
         display: flex;
         justify-content: center;
     }
-    .DrinkPage_Table {
-    
-        min-width: 310px;
-        //border-radius: 5px;
-        background-color: rgb(185, 136, 95);
-        tr {
-            border: 1px solid rgb(212, 195, 195);
-            td {
-                padding: 7px
-            }
-        }
-        margin: 10px;
-        width: 250px
-    }
     .DrinkPage_Pix {
         margin-top: 10px;
         margin-bottom: 20px;
     }
-    .DrinkPage_Input {
-        width: 30px;
-        height: 25px;
-    }
-    .DrinkPage_Button {
-        width: 28px;
-        height: 26px;
-        border: none;
-        border-radius: 2px;
-        background-color: rgba(142, 65, 17, 0.819);
-        color: rgb(213, 213, 213);
-        margin-left: 5px;;
-    }
-    // .DrinkPage_Button:focus{
-    //     outline: none;
-    // }
 }

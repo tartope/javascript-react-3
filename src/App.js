@@ -11,7 +11,7 @@ import * as localStorageProxy from './Util/LocalStorageProxy'
 import './App.scss'
 
 function App() {
-  let [showHome, setShowHome] = useState(true)
+  let [showHome, setShowHome] = useState(true) 
   let [showFood, setShowFood] = useState(false)
   let [showDrink, setShowDrink] = useState(false)
   let [showSales, setShowSales] = useState(false)
