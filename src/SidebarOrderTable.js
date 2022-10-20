@@ -6,7 +6,7 @@ export const SidebarOrderTable = ({completeOrder}) => {
 
     return (
         <div className='SidebarOrderTable'>
-            <table className='SidebarContent_Table'>
+            <table className='SidebarOrderTable_Table'>
                 <thead>
                     <tr>
                         <td>Item</td>
