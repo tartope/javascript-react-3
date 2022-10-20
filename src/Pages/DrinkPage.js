@@ -82,7 +82,7 @@ export const DrinkPage = () => {
     return (
         <div className = "DrinkPage">
             <div className = "DrinkPage_Header">
-                Drinks 
+                Drinks
             </div>
             <div className = "DrinkPage_Content">
                 <table className = "DrinkPage_Table">

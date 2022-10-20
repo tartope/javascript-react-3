@@ -9,7 +9,7 @@ export const SidebarMenu = ({onHandleLink}) => {
                 <div><img width="20px" src="home-icon.png" alt="food" /></div>
             </div>
             <div className='SidebarMenu_NavItem' onClick={() => onHandleLink("Drink")}>
-                <div>Drink</div>
+                <div>Drinks</div>
                 <div><img width="20px" src="coffee-icon.png" alt="food" /></div>
             </div>
             <div className='SidebarMenu_NavItem' onClick={() => onHandleLink("Food")}>
