@@ -15,7 +15,7 @@ export const Header = () => {
 
     const getClassName = () => {
         // Use a different class for larger orders.
-        if (getQuantity() < 9) {
+        if (getQuantity() < 10) {
           return "Header_qty_1"
         } else {
           return "Header_qty_2" 

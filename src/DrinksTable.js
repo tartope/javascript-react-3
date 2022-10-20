@@ -14,7 +14,7 @@ export const DrinksTable = () => {
         if (value === -1 && drinkData.lemonade === 0) {
             return;
         }
-        drinkData.lemonade = drinkData.lemonade + value  
+        drinkData.lemonade += value  
         setTheDrinks(drinkData)
     }
 
@@ -23,7 +23,7 @@ export const DrinksTable = () => {
         if (value === -1 && drinkData.tea === 0) {
             return;
         }
-        drinkData.tea = drinkData.tea + value  
+        drinkData.tea += value  
         setTheDrinks(drinkData)
     }
 
@@ -32,7 +32,7 @@ export const DrinksTable = () => {
         if (value === -1 && drinkData.coffee === 0) {
             return;
         }
-        drinkData.coffee = drinkData.coffee + value  
+        drinkData.coffee += value  
         setTheDrinks(drinkData)
     }
 
