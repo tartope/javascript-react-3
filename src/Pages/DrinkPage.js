@@ -2,55 +2,14 @@ import { Footer } from '../Footer'
 import React, { useRef } from 'react'
 import { useRecoilState } from 'recoil'
 import Image from 'react-bootstrap/Image'
-import { orderedDrinks } from '../Util/Atoms'
 import { formatUSD } from '../Util/Money'
+import { orderedDrinks } from '../Util/Atoms'
 import * as AppConfig from '../Util/App.Config'
 import './DrinkPage.scss'
 
 export const DrinkPage = () => {
     const inputRef = useRef(null)
     let [theDrinks, setTheDrinks] = useRecoilState(orderedDrinks)
-
-    //
-    // Input text change...
-    //
-
-    const onHandleLemonadeChange = (qty) => {
-        let drinkData = {...theDrinks}
-        drinkData.lemonade = qty  
-        if (qty) {
-            setTheDrinks(drinkData)
-        } else {
-            drinkData.lemonade = 0 
-            setTheDrinks(drinkData)
-        }
-    }
-
-    const onHandleTeaChange = (qty) => {
-        let drinkData = {...theDrinks}
-        drinkData.tea = qty  
-        if (qty) {
-            setTheDrinks(drinkData)
-        } else {
-            drinkData.tea = 0
-            setTheDrinks(drinkData)
-        }
-    }
-
-    const onHandleCoffeeChange = (qty) => {
-        let drinkData = {...theDrinks}
-        drinkData.coffee = qty  
-        if (qty) {
-            setTheDrinks(drinkData)
-        } else {
-            drinkData.coffee = 0
-            setTheDrinks(drinkData)
-        }
-    }
-
-    //
-    // Button Clicks...
-    //
 
     const onHandleLemonadeClick = (value) => {
         let drinkData = {...theDrinks}
@@ -91,7 +50,7 @@ export const DrinkPage = () => {
                             <td>Lemonade</td>
                             <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "lemonade")[0].price) }</td>
                             <td>x</td>
-                            <td><input value={theDrinks.lemonade} ref={inputRef} onChange={(e) => onHandleLemonadeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
+                            <td><input value={theDrinks.lemonade} readOnly={true} ref={inputRef} className = "DrinkPage_Input"></input></td>
                             <td>
                                 <button className="DrinkPage_Button" onClick={() => onHandleLemonadeClick(1)}>+</button>
                                 <button className="DrinkPage_Button" onClick={() => onHandleLemonadeClick(-1)}>-</button>
@@ -101,7 +60,7 @@ export const DrinkPage = () => {
                             <td>Tea</td>
                             <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "tea")[0].price) }</td>
                             <td>x</td>
-                            <td><input value={theDrinks.tea} ref={inputRef} onChange={(e) => onHandleTeaChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
+                            <td><input value={theDrinks.tea} readOnly={true} ref={inputRef} className = "DrinkPage_Input"></input></td>
                             <td>
                                 <button className="DrinkPage_Button" onClick={() => onHandleTeaClick(1)}>+</button>
                                 <button className="DrinkPage_Button" onClick={() => onHandleTeaClick(-1)}>-</button>
@@ -111,7 +70,7 @@ export const DrinkPage = () => {
                             <td>Coffee</td>
                             <td>{ formatUSD(AppConfig.prices.filter(i=>i.type === "coffee")[0].price) }</td>
                             <td>x</td>
-                            <td><input value={theDrinks.coffee} ref={inputRef} onChange={(e) => onHandleCoffeeChange(parseInt(e.target.value))} className = "DrinkPage_Input"></input></td>
+                            <td><input value={theDrinks.coffee} readOnly={true} ref={inputRef} className = "DrinkPage_Input"></input></td>
                             <td>
                                 <button className="DrinkPage_Button" onClick={() => onHandleCoffeeClick(1)}>+</button>
                                 <button className="DrinkPage_Button" onClick={() => onHandleCoffeeClick(-1)}>-</button>
