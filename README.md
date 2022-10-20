@@ -11,9 +11,10 @@ React web application that uses Recoil and React Bootstrap to implement a client
 # Deployment
 - Execute: `/devops/build-deploy.bat`
 
-# Recoil Global State Diagram 
+# Global State Diagram
+- Recoil is used to store global state
 ![](./docs/global-state-diagram.png)
 
 # Links
-- [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
 - [Recoil](https://recoiljs.org/docs/introduction/installation)
+- [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
