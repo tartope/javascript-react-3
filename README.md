@@ -7,3 +7,6 @@ Simple project that shows a chart, grid and sidebar, uses Recoil for global stat
 
 # React Bootstrap
 - https://react-bootstrap.github.io/getting-started/introduction/
+
+# Deploy
+- Execute: `/devops/build-deploy.bat`
