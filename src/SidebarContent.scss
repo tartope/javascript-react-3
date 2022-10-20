@@ -2,35 +2,6 @@
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(220, 190, 148);
-    .SidebarContent_Title {
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-    }
-    .SidebarContent_Table {
-        width: 345px;
-        margin-top: 5px;
-        background-color: rgb(255, 255, 255);
-        tr {
-            border: 1px solid black;
-            td {
-                align-items: right;
-                padding: 5px;
-            }
-        }
-    }
-    .SidebarContent_Total {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        padding-right: 10px;
-        justify-content: right;
-        span {
-            margin-left: 5px;
-            padding: 3px;
-            background-color: white;
-        }
-    }
     .SidebarContent_Checkout {
         display: flex;
         justify-content: center;
