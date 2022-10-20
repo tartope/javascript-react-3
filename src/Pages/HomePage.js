@@ -1,8 +1,7 @@
 import React from 'react'
 import { Footer } from '../Footer'
-import { CoffeeCarousel } from '../CoffeeCarousel'
 import Image from 'react-bootstrap/Image'
-
+import { CoffeeCarousel } from '../CoffeeCarousel'
 import './HomePage.scss'
 
 export const HomePage = () => {

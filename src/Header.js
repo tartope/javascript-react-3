@@ -1,7 +1,7 @@
 import { useRecoilState } from 'recoil'
-import { showSideDrawer } from './Util/Atoms'
 import { useRecoilValue } from 'recoil'
 import { drinkData } from './Util/Atoms' 
+import { showSideDrawer } from './Util/Atoms'
 import './Header.scss'
 
 export const Header = () => {

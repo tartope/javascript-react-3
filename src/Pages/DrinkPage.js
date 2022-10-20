@@ -1,10 +1,10 @@
+import { Footer } from '../Footer'
 import React, { useRef } from 'react'
 import { useRecoilState } from 'recoil'
+import Image from 'react-bootstrap/Image'
 import { drinkData } from '../Util/Atoms'
 import * as AppConfig from '../Util/App.Config'
-import Image from 'react-bootstrap/Image'
 import './DrinkPage.scss'
-import { Footer } from '../Footer'
 
 export const DrinkPage = () => {
     const inputRef = useRef(null)

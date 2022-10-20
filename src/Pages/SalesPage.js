@@ -1,7 +1,7 @@
 import React from 'react'
-import './SalesPage.scss'
 import { Footer } from '../Footer'
 import * as localStorageProxy from '../Util/LocalStorageProxy'
+import './SalesPage.scss'
 
 export const SalesPage = () => {
     const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
