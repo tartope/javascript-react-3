@@ -1,5 +1,5 @@
-import { Footer } from '../Footer'
 import React from 'react'
+import { Footer } from '../Footer'
 import Image from 'react-bootstrap/Image'
 import { DrinksTable } from '../DrinksTable'
 import './DrinkPage.scss'
