@@ -22,9 +22,9 @@ export const OrderHistoryPage = () => {
                 orders && 
                 orders.map(i => {
                     return <div key={i.id}>
-                        Order: {i.id}   <br /> 
-                        Date:  {i.date} <br />
-                        Total: {formatter.format(i.total)} <br/>
+                        Order: {i.id}  <br /> 
+                        Date:  {i.date}<br />
+                        Total: {formatter.format(i.total)}<br/>
                         {
                             i.items.map(k => {
                                 return <div key={k.item}>&nbsp;&nbsp;&nbsp;{k.item} {k.qty} {formatter.format(k.price)} {formatter.format(k.subTotal)}</div>
