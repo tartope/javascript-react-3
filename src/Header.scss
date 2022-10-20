@@ -9,19 +9,22 @@
         display: flex;
         justify-content: space-between;
     }
-    .Header_hamburger {
+    .Header_Hamburger {
         cursor: pointer;
-        padding-top: 4px;
+        margin-left: 5px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
         width: 40px;
     }
-    .Header_logo {
+    .Header_Logo {
         font-family: 'Dancing Script', cursive;
         font-size: 200%;
     }
-    .Header_logo_area {
+    .Header_Logo_Area {
         display: flex;
     }
-    .Header_cart {
+    .Header_Cart {
         // background-color: blue;
         display: inline-block;
         padding-right: 10px;
