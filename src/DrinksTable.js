@@ -1,7 +1,9 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
+import { capitalize } from './Util/Strings'
 import { orderedDrinks } from './Util/Atoms'
 import { DrinkTableRow } from './DrinkTableRow'
+import { drinkPrices } from './Util/App.Config'
 import './DrinksTable.scss'
 
 export const DrinksTable = () => {
@@ -20,24 +22,17 @@ export const DrinksTable = () => {
         <div className='DrinksTable'>
             <table className='DrinkTable_Table'>
                 <tbody>
-                    <DrinkTableRow 
-                        item='lemonade'
-                        displayName='Lemonade'
-                        theOrderedDrinks={theOrderedDrinks} 
-                        onHandleClick={(item, value) => onHandleClick(item, value)}
-                    />
-                   <DrinkTableRow 
-                        item='tea'
-                        displayName='Tea'
-                        theOrderedDrinks={theOrderedDrinks} 
-                        onHandleClick={(item, value) => onHandleClick(item, value)}
-                    />
-                    <DrinkTableRow 
-                        item='coffee'
-                        displayName='Coffee'
-                        theOrderedDrinks={theOrderedDrinks} 
-                        onHandleClick={(item, value) => onHandleClick(item, value)}
-                    />
+                    {
+                        drinkPrices.map(i => {
+                            return <DrinkTableRow 
+                                key={i.type}
+                                item={i.type}
+                                displayName={capitalize(i.type)}
+                                theOrderedDrinks={theOrderedDrinks} 
+                                onHandleClick={(item, value) => onHandleClick(item, value)}
+                            />
+                        })
+                    }
                 </tbody>
             </table>
         </div>

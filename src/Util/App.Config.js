@@ -5,7 +5,7 @@
 // Desc: All configuration options for the application.
 //
 
-export const prices = [
+export const drinkPrices = [
     { 
         type: "lemonade",
         price: 1.00 
@@ -21,5 +21,5 @@ export const prices = [
 ]
 
 export const getPriceForDrink = (type) => {
-    return prices.find(p => p.type === type).price
+    return drinkPrices.find(p => p.type === type).price
 }
