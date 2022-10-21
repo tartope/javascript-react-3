@@ -1,10 +1,10 @@
 import { useRecoilValue } from 'recoil'
-import { orderedDrinks } from './Util/Atoms'
 import { buildOrder } from './Util/Order'
 import Button from 'react-bootstrap/Button'
 import { SidebarMenu } from './SidebarMenu'
-import './SidebarContent.scss'
+import { orderedDrinks } from './Util/Atoms'
 import { OrderSection } from './OrderSection'
+import './SidebarContent.scss'
 
 export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
     const {order, total} = buildOrder(useRecoilValue(orderedDrinks)) 
@@ -16,7 +16,11 @@ export const SidebarContent = ({onHandleLink, onHandleCheckout}) => {
             <OrderSection total={total} order={order} />
             <hr />
             <div className='SidebarContent_Checkout'>
-                <Button disabled={(total > 0) ? false : true} variant="primary" onClick={() => onHandleCheckout(total, order)}>Checkout</Button>
+                <Button 
+                    variant="primary" 
+                    disabled={(total > 0) ? false : true} 
+                    onClick={() => onHandleCheckout(total, order)}>Checkout
+                </Button>
             </div>
         </div>
     )
