@@ -34,3 +34,7 @@ export const buildOrder = (drinks) => {
         total
     }
 }
+
+export const calcTotalForAllOrders = (orders) => {
+    return (orders) ? orders.map(i => i.total).reduce((a,b)=> a + b, 0) : 0
+}

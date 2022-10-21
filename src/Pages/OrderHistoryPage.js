@@ -2,12 +2,13 @@ import React from 'react'
 import { Footer } from '../Footer'
 import { formatUSD } from '../Util/Money'
 import { OrderTable } from '../OrderTable'
+import { calcTotalForAllOrders } from '../Util/Order'
 import * as localStorageProxy from '../Util/LocalStorageProxy'
 import './OrderHistoryPage.scss'
 
 export const OrderHistoryPage = () => {
     const orders = localStorageProxy.getOrders()
-    const total = (orders) ? orders.map(i => i.total).reduce((a,b)=> a + b, 0) : 0
+    const total = calcTotalForAllOrders(orders)
     
     return (
         <div className='OrderHistoryPage'>

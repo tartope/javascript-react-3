@@ -16,7 +16,7 @@ export const HomePage = () => {
             Live Music Every Friday Night
         </div>
         <div className='HomePage_Band'>
-            <Image width="800px" rounded={true} fluid={true} src="band.jpg" alt="band" />
+            <Image width='800px' rounded={true} fluid={true} src='band.jpg' alt='band' />
         </div>
         <br /><br />
         <Footer />
