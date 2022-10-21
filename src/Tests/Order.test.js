@@ -1,5 +1,5 @@
 //
-// File: App.test.js
+// File: Order.test.js
 // Auth: Martin Burolla
 // Date: 10/20/2022
 // Desc: Tests the order calculation logic.
@@ -119,4 +119,3 @@ test('Calculate total for all orders', () => {
   const total = calcTotalForAllOrders(orders)
   expect(total).toBe(10);
 });
-
