@@ -74,3 +74,6 @@ test('Order data structure', () => {
   expect(order[0].subTotal).toBe(2);
   expect(total).toBe(2);
 });
+
+
+// TODO: calcTotalForAllOrders()
