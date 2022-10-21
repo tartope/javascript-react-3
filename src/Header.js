@@ -13,7 +13,7 @@ export const Header = () => {
     }
 
     const getClassName = () => {
-        return (getQuantity() < 10) ? 'Header_qty_1' : 'Header_qty_2' 
+        return (getQuantity() < 10) ? 'Header_Qty_Small' : 'Header_Qty_Large' 
     }
 
     return (
