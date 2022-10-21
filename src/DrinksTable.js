@@ -10,7 +10,7 @@ export const DrinksTable = () => {
     let [theOrderedDrinks, setOrderedDrinks] = useRecoilState(orderedDrinks)
 
     const onHandleClick = (item, value) => {
-        let drinks = {...theOrderedDrinks}
+        const drinks = {...theOrderedDrinks}
         if (value === -1 && drinks[item] === 0) {
             return;
         }

@@ -6,6 +6,12 @@ const main2 = () => {
     console.log(b)
 }
 
+const test = (array) => {
+    // array[0].name = "ALICE"  OK
+    // array[0] = { ...array[0], num: 1 }
+    //array.unshift(array.pop())
+}
+
 const main = () => {
     let aa = [1,2,3]
     let a = [
@@ -20,12 +26,18 @@ const main = () => {
         {
             id: 13,
             name: "Charlie"
-        },
-        {
-            id: 14,
-            name: "Bob"
         }
     ]
+
+    // test(a)
+    // console.log(a)
+
+    // let r = a.map(i => i)
+
+    a.sort((a,b) => a.name.localeCompare(b.name))
+    a.reverse()
+    console.log(a)
+
 
     // let dd = {...a.find(i => i.id === 1)}
     // a[0].name = "ALICE"
@@ -39,8 +51,8 @@ const main = () => {
     // console.log(r)
 
     // Use Foreach to UPDATE every element in an array.
-    a.forEach(i => i.name = i.name.toLocaleUpperCase())
-    console.log(a)
+    //a.forEach(i => i.name = i.name.toLocaleUpperCase())
+    //console.log(a)
 
     //let b = a.copyWithin(0,3)
     // let b = [...a]
