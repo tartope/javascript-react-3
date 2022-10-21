@@ -7,6 +7,18 @@
 
 import { getPriceForDrink } from './App.Config'
 
+/**
+ * @param {*} drinks 
+ * @returns An array of objects that the customer has ordered.
+ *  [
+      { 
+        item: 'tea', 
+        qty: 1, 
+        price: 2, 
+        subTotal: 2
+      }
+    ] 
+ */
 export const buildOrder = (drinks) => {
     let total = 0
     let arrayOfDrinks = Object.keys(drinks)
@@ -35,6 +47,10 @@ export const buildOrder = (drinks) => {
     }
 }
 
+/**
+ * @param {*} orders 
+ * @returns The total amount of all the orders.
+ */
 export const calcTotalForAllOrders = (orders) => {
     return (orders) ? orders.map(i => i.total).reduce((a,b)=> a + b, 0) : 0
 }

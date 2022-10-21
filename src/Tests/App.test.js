@@ -6,7 +6,11 @@
 //       Prices are stored in App.Config.js
 //
 
-import { buildOrder } from '../Util/Order'
+import { buildOrder, calcTotalForAllOrders } from '../Util/Order'
+
+//
+// Test: buildOrder()
+//
 
 test('Order 1 lemonade', () => {
   const customerDrinkOrder = {
@@ -48,8 +52,6 @@ test('Order a bunch of drinks', () => {
   expect(total).toBe(20);
 });
 
-//
-
 test('Order data structure', () => {
   const customerDrinkOrder = {
       tea: 1,
@@ -75,5 +77,46 @@ test('Order data structure', () => {
   expect(total).toBe(2);
 });
 
+//
+// Test: calcTotalForAllOrders()
+//
 
-// TODO: calcTotalForAllOrders()
+test('Calculate total for all orders', () => {
+  const orders = [
+    {
+      id: 1,
+      items: [
+        {
+          item: 'lemonade', 
+          qty: 1, 
+          price: 1, 
+          subTotal: 1
+        },
+        {
+          item: 'tea', 
+          qty: 1, 
+          price: 2, 
+          subTotal: 2
+        }
+      ],
+      total: 3, // <== sum this value.
+      date: '10/20/2022'
+    },
+    {
+      id: 2,
+      items: [
+        {
+          item: 'lemonade', 
+          qty: 7, 
+          price: 1, 
+          subTotal: 7
+        }
+      ],
+      total: 7, // <== sum this value.
+      date: '10/20/2022'
+    },
+  ]
+  const total = calcTotalForAllOrders(orders)
+  expect(total).toBe(10);
+});
+
