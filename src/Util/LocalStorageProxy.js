@@ -14,7 +14,7 @@ export const initLocalStorageProxy = () => {
     } 
 }
 
-export const getOrders= () => {
+export const getOrders = () => {
     return JSON.parse(localStorage.getItem(LS_COFFEE_PLACE_KEY))
 }
 
