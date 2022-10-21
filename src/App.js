@@ -2,10 +2,10 @@ import { Header } from './Header'
 import { Content } from './Content'
 import { orderedDrinks } from './Util/Atoms'
 import { showSideDrawer } from './Util/Atoms'
-import { ModalCheckout } from './ModalCheckout'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { SidebarContent } from './SidebarContent'
 import React, { useEffect, useState } from 'react'
+import { ModalCoffeeShop } from './ModalCoffeeShop'
 import { useRecoilState, useResetRecoilState } from 'recoil'
 import * as localStorageProxy from './Util/LocalStorageProxy'
 import './App.scss'
@@ -87,7 +87,11 @@ function App() {
           showSales={showSales} 
           showDessert={showDessert} 
         />
-        <ModalCheckout showModal={showModal} setShowModal={() => setShowModal(false)}/>
+        <ModalCoffeeShop 
+          showModal={showModal} 
+          setShowModal={() => setShowModal(false)}
+          message={'Thank you for your order!'}  
+        />
     </div>
   )
 }
