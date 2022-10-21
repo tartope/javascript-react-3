@@ -89,7 +89,7 @@ function App() {
         />
         <ModalCheckout showModal={showModal} setShowModal={() => setShowModal(false)}/>
     </div>
-  );
+  )
 }
 
 export default App;
