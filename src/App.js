@@ -60,8 +60,8 @@ function App() {
       date: new Date().toLocaleDateString()
     })
     localStorageProxy.setOrders(orders)
-    setShowModal(true)
     resetDrinkRecoilState()
+    setShowModal(true)
   }
 
   return (
