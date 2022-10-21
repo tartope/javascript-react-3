@@ -13,18 +13,17 @@ export const buildOrder = (drinks) => {
 
     const arrayOfDrinkObjects = arrayOfDrinks.map(i => {
         return {
-            type: i,
+            item: i,
             qty: drinks[i]
         }
     })
 
     const allItems = arrayOfDrinkObjects.map(i => {
-        total += i.qty * getPriceForDrink(i.type)
+        total += i.qty * getPriceForDrink(i.item)
         return {
-            item: i.type,
-            qty: i.qty,
-            price: getPriceForDrink(i.type),
-            subTotal: i.qty * getPriceForDrink(i.type)
+            ...i,
+            price: getPriceForDrink(i.item),
+            subTotal: i.qty * getPriceForDrink(i.item)
         }
     })
 
