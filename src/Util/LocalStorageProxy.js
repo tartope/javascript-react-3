@@ -15,7 +15,12 @@ export const initLocalStorageProxy = () => {
 }
 
 export const getOrders = () => {
-    return JSON.parse(localStorage.getItem(LS_COFFEE_PLACE_KEY))
+    let orders = localStorage.getItem(LS_COFFEE_PLACE_KEY)
+    if (orders == null) {
+        localStorage.setItem(LS_COFFEE_PLACE_KEY, JSON.stringify([]))
+        orders = localStorage.getItem(LS_COFFEE_PLACE_KEY)
+    }
+    return JSON.parse(orders)
 }
 
 export const setOrders = (orders) => {
