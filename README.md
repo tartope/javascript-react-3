@@ -1,4 +1,4 @@
-# JavaScript React Coffee Shop
+# JavaScript React Coffee Place
 React web application that uses Recoil and React Bootstrap to implement a client side shopping cart for a coffee shop.
 
 ![](./docs/screen-shot.png)
