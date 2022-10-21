@@ -1,0 +1,17 @@
+.DrinkTableRow {
+    .DrinkTableRow_Button {
+        width: 28px;
+        height: 26px;
+        border: none;
+        margin-left: 5px;
+        border-radius: 2px;
+        color: rgb(213, 213, 213);
+        background-color: rgba(142, 65, 17, 0.819);
+    }
+    .DrinkTableRow_OrderAmount {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+}
