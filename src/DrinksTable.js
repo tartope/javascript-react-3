@@ -25,11 +25,11 @@ export const DrinksTable = () => {
                     {
                         drinkPrices.map(i => {
                             return <DrinkTableRow 
-                                key={i.type}
-                                item={i.type}
-                                displayName={capitalize(i.type)}
-                                theOrderedDrinks={theOrderedDrinks} 
-                                onHandleClick={(item, value) => onHandleClick(item, value)}
+                                key={ i.id }
+                                item={ i.type }
+                                displayName={ capitalize(i.type) }
+                                theOrderedDrinks={ theOrderedDrinks } 
+                                onHandleClick={ (item, value) => onHandleClick(item, value) }
                             />
                         })
                     }

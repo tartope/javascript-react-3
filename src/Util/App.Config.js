@@ -7,14 +7,17 @@
 
 export const drinkPrices = [
     { 
+        id: 1,
         type: "lemonade",
         price: 1.00 
     },
     { 
+        id: 2,
         type: "tea",
         price: 2.00 
     },
     { 
+        id: 3,
         type: "coffee",
         price: 3.00 
     }
