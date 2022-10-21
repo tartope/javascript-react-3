@@ -1,13 +1,9 @@
 import React from 'react'
 import { formatUSD } from './Util/Money'
+import { capitalize } from './Util/Strings'
 import './OrderTable.scss'
 
 export const OrderTable = ({completeOrder}) => {
-    const capitalize = (s) => {
-        if (typeof s !== 'string') return ''
-        return s.charAt(0).toUpperCase() + s.slice(1)
-    }
-
     return (
         <div className='OrderTable'>
             <table className='OrderTable_Table'>
