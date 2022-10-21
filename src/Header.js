@@ -5,8 +5,8 @@ import { showSideDrawer } from './Util/Atoms'
 import './Header.scss'
 
 export const Header = () => {
-    const [, setShowSideDrawer] = useRecoilState(showSideDrawer)
     const drinks = useRecoilValue(orderedDrinks) 
+    const [, setShowSideDrawer] = useRecoilState(showSideDrawer)
 
     const getQuantity = () => {
         return (drinks.tea + drinks.coffee + drinks.lemonade)
