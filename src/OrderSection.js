@@ -9,7 +9,7 @@ export const OrderSection = ({total, order}) => {
         <div className='OrderSection_Title'>
             Your Order
         </div>
-         {
+        {
             total > 0 && 
             <>
                 <strong>Drinks</strong>
