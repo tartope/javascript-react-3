@@ -8,7 +8,6 @@
 const LS_COFFEE_PLACE_KEY = 'Coffee_Place_V1'
 
 export const initLocalStorageProxy = () => {
-    // Orders
     const orders = JSON.parse(localStorage.getItem(LS_COFFEE_PLACE_KEY))
     if (orders == null) {
         localStorage.setItem(LS_COFFEE_PLACE_KEY, JSON.stringify([]))
