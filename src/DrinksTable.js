@@ -25,7 +25,9 @@ export const DrinksTable = () => {
                         <td>Lemonade</td>
                         <td>{ formatUSD(AppConfig.getPriceForDrink('lemonade')) }</td>
                         <td>x</td>
-                        <td><input value={theOrderedDrinks.lemonade} readOnly={true} className='DrinkTable_Input'></input></td>
+                        <td>
+                            <div className='DrinkTable_OrderAmount'>{theOrderedDrinks.lemonade}</div>
+                        </td>
                         <td>
                             <button className='DrinkTable_Button' onClick={() => onHandleClick('lemonade', 1)}>+</button>
                             <button className='DrinkTable_Button' onClick={() => onHandleClick('lemonade', -1)}>-</button>
@@ -35,7 +37,9 @@ export const DrinksTable = () => {
                         <td>Tea</td>
                         <td>{ formatUSD(AppConfig.getPriceForDrink('tea')) }</td>
                         <td>x</td>
-                        <td><input value={theOrderedDrinks.tea} readOnly={true} className='DrinkTable_Input'></input></td>
+                        <td>
+                            <div className='DrinkTable_OrderAmount'>{theOrderedDrinks.tea}</div>
+                        </td>
                         <td>
                             <button className='DrinkTable_Button' onClick={() => onHandleClick('tea', 1)}>+</button>
                             <button className='DrinkTable_Button' onClick={() => onHandleClick('tea', -1)}>-</button>
@@ -45,7 +49,9 @@ export const DrinksTable = () => {
                         <td>Coffee</td>
                         <td>{ formatUSD(AppConfig.getPriceForDrink('coffee')) }</td>
                         <td>x</td>
-                        <td><input value={theOrderedDrinks.coffee} readOnly={true} className='DrinkTable_Input'></input></td>
+                        <td>
+                            <div className='DrinkTable_OrderAmount'>{theOrderedDrinks.coffee}</div>
+                        </td>
                         <td>
                             <button className='DrinkTable_Button' onClick={() => onHandleClick('coffee', 1)}>+</button>
                             <button className='DrinkTable_Button' onClick={() => onHandleClick('coffee', -1)}>-</button>

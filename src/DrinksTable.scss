@@ -24,7 +24,10 @@
         width: 30px;
         height: 25px;
     }
-    input {
-        padding: 3px;
-    }  
+    .DrinkTable_OrderAmount {
+        display: flex;
+        justify-content: center;
+        width: 30px;
+        background-color: white;
+    }
 }
