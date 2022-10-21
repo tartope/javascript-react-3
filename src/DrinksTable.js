@@ -7,7 +7,7 @@ import { drinkPrices } from './Util/App.Config'
 import './DrinksTable.scss'
 
 export const DrinksTable = () => {
-    let [theOrderedDrinks, setOrderedDrinks] = useRecoilState(orderedDrinks)
+    const [theOrderedDrinks, setOrderedDrinks] = useRecoilState(orderedDrinks)
 
     const onHandleClick = (item, value) => {
         const drinks = {...theOrderedDrinks}
