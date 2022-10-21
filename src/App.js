@@ -17,7 +17,7 @@ function App() {
   let [showSales, setShowSales] = useState(false)
   let [showModal, setShowModal] = useState(false)
   let [showDessert, setShowDessert] = useState(false)
-  const resetDrinkState = useResetRecoilState(orderedDrinks)
+  const resetDrinkRecoilState = useResetRecoilState(orderedDrinks)
   let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer)
 
   useEffect(() => {
@@ -61,7 +61,7 @@ function App() {
     })
     localStorageProxy.setOrders(orders)
     setShowModal(true)
-    resetDrinkState()
+    resetDrinkRecoilState()
   }
 
   return (
