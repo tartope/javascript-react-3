@@ -2,6 +2,7 @@ import { useRecoilState } from 'recoil'
 import { useRecoilValue } from 'recoil'
 import { orderedDrinks } from './Util/Atoms' 
 import { showSideDrawer } from './Util/Atoms'
+import { getTotalNumberDrinks } from './Util/Order'
 import './Header.scss'
 
 export const Header = () => {
@@ -9,7 +10,7 @@ export const Header = () => {
     const [, setShowSideDrawer] = useRecoilState(showSideDrawer)
 
     const getQuantity = () => {
-        return (drinks.tea + drinks.coffee + drinks.lemonade)
+        return getTotalNumberDrinks(drinks)
     }
 
     const getClassName = () => {
@@ -33,7 +34,7 @@ export const Header = () => {
                 </div>
                 <div className='Header_Cart' onClick={() => setShowSideDrawer(true)}>
                     <img width='40px' src='shopping-cart.png' alt='shopping cart'/>
-                    <div className={getClassName()}>{getQuantity()}</div>
+                    <div className={ getClassName() }>{ getQuantity() }</div>
                 </div>
             </div>
         </div>

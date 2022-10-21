@@ -54,3 +54,16 @@ export const buildOrder = (drinks) => {
 export const calcTotalForAllOrders = (orders) => {
     return (orders) ? orders.map(i => i.total).reduce((a,b)=> a + b, 0) : 0
 }
+
+/**
+ * @param {} drinks 
+ * @returns The total number of drinks the customer has ordered.
+ */
+export const getTotalNumberDrinks = (drinks) => {
+    let totalDrinks = 0
+    const arrayOfDrinks = Object.keys(drinks)
+    arrayOfDrinks.forEach(i => {
+        totalDrinks += drinks[i]
+    })
+    return totalDrinks
+}
