@@ -6,7 +6,7 @@
 //       Prices are stored in App.Config.js
 //
 
-import { buildOrder, calcTotalForAllOrders } from '../Util/Order'
+import { buildOrder, calcTotalForAllOrders, getTotalNumberDrinks } from '../Util/Order'
 
 //
 // Test: buildOrder()
@@ -118,4 +118,18 @@ test('Calculate total for all orders', () => {
   ]
   const total = calcTotalForAllOrders(orders)
   expect(total).toBe(10);
+});
+
+//
+// Test: getTotalNumberDrinks()
+//
+
+test('Calculate total number of drinks', () => {
+  const customerDrinkOrder = {
+    tea: 1,
+    coffee: 2,
+    lemonade: 3
+  }
+  const total = getTotalNumberDrinks(customerDrinkOrder)
+  expect(total).toBe(6);
 });

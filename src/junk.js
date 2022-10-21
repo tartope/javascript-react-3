@@ -10,6 +10,7 @@ const test = (array) => {
     // array[0].name = "ALICE"  OK
     // array[0] = { ...array[0], num: 1 }
     //array.unshift(array.pop())
+    array[0].name = "Marty"
 }
 
 const main = () => {
@@ -29,14 +30,10 @@ const main = () => {
         }
     ]
 
-    // test(a)
-    // console.log(a)
-
-    // let r = a.map(i => i)
-
-    a.sort((a,b) => a.name.localeCompare(b.name))
-    a.reverse()
-    console.log(a)
+    test(a)
+    //a = []
+    // a = 'test'
+    console.log(a.valueOf())
 
 
     // let dd = {...a.find(i => i.id === 1)}
