@@ -15,5 +15,5 @@ Add 10% sales tax to the total order.
 # Ex 5. Band Schedule
 Indicate to users future performances of the band (band name & time).
 
-# Ex 6. Connect to API
+# Ex 6. Connect to Web API
 Currently, the business logic is stored on the client.  This is not ideal.  Move ALL business logic to calculate orders and taxes to a server side web API.
