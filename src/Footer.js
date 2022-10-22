@@ -11,10 +11,15 @@ export const Footer = () => {
         <div className='Footer_Center'>
         </div>
         <div className='Footer_Social'>
-          
-            <Image className='icon' width="35px" rounded={true} fluid={true} src="insta-icon.png" alt="insta" />
-            <Image className='icon' width="35px" rounded={true} fluid={true} src="facebook-icon.png" alt="facebook" />
-            <Image className='icon' width="35px" rounded={true} fluid={true} src="twitter-icon.png" alt="twitter" />
+            <a href='https://www.instagram.com' target="_blank" rel="noreferrer">
+              <Image className='icon' width="35px" rounded={true} fluid={true} src="insta-icon.png" alt="insta" />
+            </a>
+            <a href='https://www.facebook.com' target="_blank" rel="noreferrer">
+              <Image className='icon' width="35px" rounded={true} fluid={true} src="facebook-icon.png" alt="facebook" />
+            </a>
+            <a href='https://www.twitter.com' target="_blank" rel="noreferrer">
+              <Image className='icon' width="35px" rounded={true} fluid={true} src="twitter-icon.png" alt="twitter" />
+            </a>
         </div>
     </div>
   )
