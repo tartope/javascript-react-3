@@ -12,7 +12,7 @@ export const HomePage = () => {
         </div>
         <CoffeeCarousel />
         <br />
-        <div className='HomePage_Header'>
+        <div className='HomePage_Band_Header'>
             Live Music Every Friday Night
         </div>
         <div className='HomePage_Band'>

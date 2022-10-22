@@ -1,21 +1,23 @@
 .Footer {
     background-color: rgb(18, 0, 0);
     color: rgb(189, 189, 189);
-    padding: 5px;
+    padding: 15px;
     margin: -5px;
     display: flex;
     justify-content: space-between;
     .Footer_Menu {
         padding-left: 15px;
+        display: flex;
+        align-items: center;
     }
     .Footer_Center {
         padding-top: 22px;
     }
     .Footer_Social {
-        padding-top: 15px;
-        width: 150px;
+        padding-top: 10px;
+        width: 250px;
         .icon {
-            margin: 10px
+            margin: 20px
         }
     }
 }

@@ -10,9 +10,22 @@
         font-size: 200%;
         font-family: 'Hind Madurai', sans-serif;
     }
+    .HomePage_Band_Header {
+        color: rgb(226, 226, 226);
+        font-size: 200%;
+        display: flex;
+        justify-content: center;
+    }
     .HomePage_Band {
         margin-top: 15px;
         display: flex;
         justify-content: center;
     }
+
+    @media screen and (max-width: 600px) {
+         // If the screen size is 600px wide or less, change the font size.
+        .HomePage_Band_Header {
+            font-size: 30px;
+        }
+    } 
 }
