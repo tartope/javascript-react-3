@@ -5,8 +5,8 @@
     user-select: none; /* Standard syntax */
 
     .DrinkTableRow_Button {
-        width: 28px;
-        height: 26px;
+        width: 45px;
+        height: 45px;
         border: none;
         margin-left: 5px;
         border-radius: 2px;
@@ -14,9 +14,11 @@
         background-color: rgba(142, 65, 17, 0.819);
     }
     .DrinkTableRow_OrderAmount {
-        width: 30px;
+        width: 45px;
+        height: 45px;
         display: flex;
         justify-content: center;
+        align-items: center;
         background-color: white;
     }
 }

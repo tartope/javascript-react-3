@@ -1,12 +1,15 @@
 .DrinksTable {
     .DrinkTable_Table {
+      
         margin: 10px;
-        width: 250px;
+        width: 400px;
         min-width: 310px;
         background-color: rgb(185, 136, 95);
         tr {
+            
             border: 1px solid rgb(212, 195, 195);
             td {
+                font-size: 110%;
                 padding: 7px;
             }
         }
