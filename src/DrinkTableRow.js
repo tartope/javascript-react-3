@@ -14,6 +14,8 @@ export const DrinkTableRow = ({displayName, item, theOrderedDrinks, onHandleClic
         </td>
         <td>
             <button className='DrinkTableRow_Button' onClick={ () => onHandleClick(item, 1) }>+</button>
+        </td>
+        <td>
             <button className='DrinkTableRow_Button' onClick={ () => onHandleClick(item, -1) }>-</button>
         </td>
     </tr>
