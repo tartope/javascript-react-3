@@ -1,6 +1,8 @@
 # JavaScript React Coffee Place
 React web application that uses Recoil and React Bootstrap to implement a client side shopping cart for a coffee shop.
 
+Assignments are located [here](./assignments.md)
+
 ![](./docs/screen-shot.png)
 
 # Getting Started
