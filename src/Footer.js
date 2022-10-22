@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <div className='Footer'>
         <div className='Footer_Menu'>
-            About Us<br/>
+            Copyright 2022<br/>
         </div>
         <div className='Footer_Center'>
         </div>
