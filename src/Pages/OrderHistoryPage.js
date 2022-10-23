@@ -1,5 +1,4 @@
 import React from 'react'
-import { Footer } from '../Footer'
 import { formatUSD } from '../Util/Money'
 import { OrderTable } from '../OrderTable'
 import { calcTotalForAllOrders } from '../Util/Order'
@@ -34,7 +33,6 @@ export const OrderHistoryPage = () => {
             }
             </div>
             <br />
-            <Footer />
         </div>
     )
 }

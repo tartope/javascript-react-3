@@ -1,5 +1,4 @@
 import React from 'react'
-import { Footer } from '../Footer'
 import './DessertPage.scss'
 
 export const DessertPage = () => {
@@ -16,7 +15,6 @@ export const DessertPage = () => {
               <br/>
           </div>
       </div>
-      <Footer />
     </div>
   )
 }

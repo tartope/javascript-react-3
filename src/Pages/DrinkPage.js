@@ -1,5 +1,4 @@
 import React from 'react'
-import { Footer } from '../Footer'
 import Image from 'react-bootstrap/Image'
 import { DrinksTable } from '../DrinksTable'
 import './DrinkPage.scss'
@@ -24,7 +23,6 @@ export const DrinkPage = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
