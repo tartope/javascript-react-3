@@ -1,7 +1,7 @@
 # Coffee Place Assignments
 
 # Ex 1. Add Milk
-Good software is easily extensible.  Add Milk for $4.00 to the drinks menu. See how easy that was?  :-)
+Good software is easily extensible.  Add Milk for $4.00 to the drinks menu. Wasn't that easy?  :-)
 
 # Ex 2. Build Food Section
 Build the food section to contain at least three food items.  This can resemble the drinks section or you can create your own approach.  Make sure the sidebar contains food items selected from the user.
