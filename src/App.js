@@ -1,5 +1,4 @@
 import { Header } from './Header'
-import { Footer } from './Footer'
 import { Content } from './Content'
 import { orderedDrinks } from './Util/Atoms'
 import { showSideDrawer } from './Util/Atoms'
@@ -93,7 +92,7 @@ function App() {
           setShowModal={() => setShowModal(false)}
           message={'Thank you for your order!'}  
         />
-       
+         
     </div>
   )
 }
