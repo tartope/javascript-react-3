@@ -20,4 +20,11 @@
             margin: 20px
         }
     }
+
+    @media screen and (max-width: 600px) {
+        // If the screen size is 600px wide or less, change the font size.
+       .Footer_Menu {
+           font-size: 15px;
+       }
+   } 
 }
