@@ -3,20 +3,20 @@
     background-color: rgb(129, 103, 69);
     .OrderHistoryPage_Header {
         margin-top: 8px;
+        padding: 5px;
         display: flex;
         justify-content: center;
         background-color: white;
         border-radius: 5px;
         font-size: x-large;
-        margin-bottom: 5px;
         font-size: 160%;
         font-family: 'Merriweather Sans', sans-serif;
     }
     .OrderHistoryPage_Content {
         margin-top: 8px;
+        margin-bottom: 5px;
         padding: 5px;
         background-color: white;
         border-radius: 5px;
-        margin-bottom: 5px;
     }
 }

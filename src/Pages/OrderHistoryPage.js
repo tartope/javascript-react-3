@@ -18,21 +18,22 @@ export const OrderHistoryPage = () => {
                 Grand Total: {formatUSD(total)} <br />
                 Total Number of Orders: {orders && orders.length}
             </div>
-            <div className='OrderHistoryPage_Content'>
             {   
-                orders && 
-                orders.map(i => {
-                    return <div key={i.id}>
-                        Order: {i.id}  <br /> 
-                        Total: {formatUSD(i.total)}<br/>
-                        Date:  {i.date}<br />
-                        <OrderTable completeOrder={i.items}/>
-                        <hr />
-                    </div>
-                })
+                orders && orders.length > 0 && 
+                <div className='OrderHistoryPage_Content'>
+                    {   
+                        orders.map(i => {
+                            return <div key={i.id}>
+                                Order: {i.id}  <br /> 
+                                Total: {formatUSD(i.total)}<br/>
+                                Date:  {i.date}<br />
+                                <OrderTable completeOrder={i.items}/>
+                                <hr />
+                            </div>
+                        })
+                    }
+                </div>
             }
-            </div>
-            <br />
         </div>
     )
 }

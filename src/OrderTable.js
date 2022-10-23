@@ -17,6 +17,7 @@ export const OrderTable = ({completeOrder}) => {
                 </thead>
                 <tbody>
                     { 
+                        completeOrder &&
                         completeOrder.map(i => {
                             return <tr key={ i.item }>
                                         <td>{ capitalize(i.item) }</td>
