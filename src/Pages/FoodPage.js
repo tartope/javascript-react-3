@@ -5,16 +5,18 @@ import './FoodPage.scss'
 export const FoodPage = () => {
   return (
     <div className='FoodPage'>
-        <div className='FoodPage_Header'>
-            Food 
-        </div>
-        <div>
-            <br/>
-            Todo...
-            <br/>
-            <br/>
-        </div>
-        <Footer />
+       <div className='Center_Content'>
+          <div className='FoodPage_Header'>
+                Food 
+            </div>
+            <div>
+                <br/>
+                Todo...
+                <br/>
+                <br/>
+            </div>
+       </div>
+       <Footer />
     </div>
   )
 }
