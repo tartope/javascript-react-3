@@ -1,8 +1,22 @@
 $main-content-width: 960px;
 
+html {
+    background-color: rgb(18, 0, 0);
+}
+
 .Center_Content {
     margin: auto; 
     max-width: $main-content-width;
     // border-left: 1px solid black;
     // border-right:1px solid black;
+}
+
+// Hide scrollbars
+::-webkit-scrollbar {
+    width: 0;  
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: red;
 }
