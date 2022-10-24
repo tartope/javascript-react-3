@@ -1,9 +1,11 @@
+@use '../shared-style' as ss;
+
 .HomePage {
     padding: 5px;
-    background-color: rgb(129, 103, 69);
+    background-color: ss.$main-color-1;
     .HomePage_Header {
         border-radius: 5px;
-        color: rgb(226, 226, 226);
+        color: ss.$white-color-2;
         display: flex;
         justify-content: center;
         margin-bottom: 5px;
@@ -11,7 +13,7 @@
         font-family: 'Hind Madurai', sans-serif;
     }
     .HomePage_Band_Header {
-        color: rgb(226, 226, 226);
+        color: ss.$white-color-2;
         font-size: 200%;
         display: flex;
         justify-content: center;

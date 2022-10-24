@@ -1,6 +1,8 @@
+@use '../shared-style' as ss;
+
 .DrinkPage {
     padding: 5px;
-    background-color:rgb(129, 103, 69);
+    background-color:ss.$main-color-1;
     .DrinkPage_Header {
         margin-top: 8px;
         border-radius: 5px;

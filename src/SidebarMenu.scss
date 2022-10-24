@@ -1,3 +1,5 @@
+@use 'shared-style' as ss;
+
 .SidebarMenu {
     .SidebarMenu_NavItem {
         background-color: rgb(255, 255, 255);
@@ -9,7 +11,7 @@
         justify-content: space-between;
     }
     .SidebarMenu_NavItem:hover {
-        background-color: rgb(167, 100, 6);
+        background-color: ss.$highlight-color;
         color: white;
     }
 }

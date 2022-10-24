@@ -1,7 +1,9 @@
+@use 'shared-style' as ss;
+
 .SidebarContent {
     border-radius: 5px;
     padding: 10px;
-    background-color: rgb(220, 190, 148);
+    background-color: ss.$main-color-3;
     .SidebarContent_Checkout {
         display: flex;
         justify-content: center;
