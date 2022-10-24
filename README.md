@@ -5,6 +5,8 @@ Assignments are located [here](./assignments.md).
 
 ![](./docs/screen-shot.png)
 
+NOTE: This is an academic example and should be treated as such! The logic for calculating the orders MUST be executed on the server.  This prevents the client from altering the cost of the product.
+
 # Getting Started
 - Clone this repo
 - Install dependencies: `npm install`
