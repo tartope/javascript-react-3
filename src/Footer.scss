@@ -1,6 +1,8 @@
+@use 'shared-style.scss' as ss;
+
 .Footer {
-    background-color: rgb(18, 0, 0);
-    color: rgb(189, 189, 189);
+    background-color: ss.$dark-color-1;
+    color: ss.$gray-color-1;
     padding: 15px;
     display: flex;
     justify-content: space-between;
