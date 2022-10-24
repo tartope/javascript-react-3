@@ -4,7 +4,7 @@
 // Date: 10/19/2022
 // Desc: The one and only place where the customer order is calculated.
 //
-//       NOTE: This is an acedemic example and should be treated as such!
+//       NOTE: This is an academic example and should be treated as such!
 //       This logic must be stored on the server to prevent the client from
 //       altering the cost of the product.
 //
