@@ -29,7 +29,7 @@ export const Header = () => {
                 </img>
             </div>
             <div className='Header_Logo_Area'>
-                <div className='Header_Logo'>
+                <div className='Header_Logo Product_Font'>
                     The Coffee Place
                 </div>
                 <div className='Header_Cart' onClick={() => setShowSideDrawer(true)}>

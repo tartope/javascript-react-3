@@ -71,7 +71,7 @@ function App() {
         <Offcanvas show={showTheSideDrawer} onHide={() => setShowSideDrawer(false)}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
-              <div className='App_Title'>The Coffee Place</div>
+              <div className='App_Title Product_Font'>The Coffee Place</div>
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
