@@ -10,7 +10,7 @@ export const FoodPage = () => {
             </div>
             <div>
                 <br/>
-                Todo...
+                
                 <br/>
                 <br/>
             </div>
