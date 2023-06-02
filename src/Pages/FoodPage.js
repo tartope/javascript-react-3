@@ -1,5 +1,6 @@
 import React from 'react'
 import './FoodPage.scss'
+import { FoodsTable } from '../FoodsTable'
 
 export const FoodPage = () => {
   return (
@@ -8,11 +9,8 @@ export const FoodPage = () => {
           <div className='FoodPage_Header'>
                 Food 
             </div>
-            <div>
-                <br/>
-                
-                <br/>
-                <br/>
+            <div className='FoodPage_Content'>
+                <FoodsTable />
             </div>
        </div>
     </div>

@@ -28,6 +28,17 @@ export const orderedDrinks = atom({
     }
 })
 
+export const orderedFoods = atom({
+    key: 'orderedFoods',
+    default:{
+        hamburger: 0,
+        pasta: 0,
+        pizza: 0,
+        jerk_chicken: 0,
+        sushi: 0
+    }
+})
+
 //
 // Component access: 
 //   Read/Write:
