@@ -12,6 +12,7 @@ export const FoodsTable = () => {
     const onHandleClick = (item, value)=>{
         // make a copy of ordered food object
         const foods = {...theOrderedFoods};
+        // prevents you from going to a negative number
         if(value === -1 && foods[item] === 0){
             return;
         }

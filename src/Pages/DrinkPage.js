@@ -15,11 +15,13 @@ export const DrinkPage = () => {
                 </div>
                 <div className='DrinkPage_Content'>
                     <div className='DrinkPage_Pix'>
-                        <Image width='800px' rounded={true} fluid={true} src='coffee.jpg' alt='coffee' />
+                        <Image width='800px' rounded={true} fluid={true} src='lemonade.jpg' alt='coffee' />
                         <br /><br />
                         <Image width='800px' rounded={true} fluid={true} src='tea.jpg' alt='tea' />
                         <br /><br />
-                        <Image width='800px' rounded={true} fluid={true} src='lemonade.jpg' alt='lemonade' />
+                        <Image width='800px' rounded={true} fluid={true} src='coffee.jpg' alt='lemonade' />
+                        <br /><br />
+                        <Image width='800px' rounded={true} fluid={true} src='milk.jpg' alt='milk' />
                     </div>
                 </div>
             </div>

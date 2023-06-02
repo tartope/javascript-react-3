@@ -9,7 +9,7 @@
 //       altering the cost of the product.
 //
 
-import { getPriceForDrink } from './App.Config'
+import { getPriceForDrink, getPriceForFood } from './App.Config'
 
 /**
  * @param {*} drinks 
@@ -24,7 +24,7 @@ import { getPriceForDrink } from './App.Config'
     ] 
  */
 export const buildOrder = (drinks) => {
-    let total = 0
+    let drinksTotal = 0
     let arrayOfDrinks = Object.keys(drinks)
 
     const arrayOfDrinkObjects = arrayOfDrinks.map(i => {
@@ -35,7 +35,7 @@ export const buildOrder = (drinks) => {
     })
 
     const allItems = arrayOfDrinkObjects.map(i => {
-        total += i.qty * getPriceForDrink(i.item)
+        drinksTotal += i.qty * getPriceForDrink(i.item)
         return {
             ...i,
             price: getPriceForDrink(i.item),
@@ -43,11 +43,39 @@ export const buildOrder = (drinks) => {
         }
     })
 
-    const order = allItems.filter(i => i.qty > 0)
+    const drinksOrder = allItems.filter(i => i.qty > 0)
 
     return {
-        order,
-        total
+        drinksOrder,
+        drinksTotal
+    }
+}
+
+export const buildFoodOrder = (foods) => {
+    let foodsTotal = 0
+    let arrayOfFoods = Object.keys(foods)
+
+    const arrayOfFoodObjects = arrayOfFoods.map(i => {
+        return {
+            item: i,
+            qty: foods[i]
+        }
+    })
+
+    const allItems = arrayOfFoodObjects.map(i => {
+        foodsTotal += i.qty * getPriceForFood(i.item)
+        return {
+            ...i,
+            price: getPriceForFood(i.item),
+            subTotal: i.qty * getPriceForFood(i.item)
+        }
+    })
+
+    const foodsOrder = allItems.filter(i => i.qty > 0)
+
+    return {
+        foodsOrder,
+        foodsTotal
     }
 }
 
@@ -70,4 +98,13 @@ export const getTotalNumberDrinks = (drinks) => {
         totalDrinks += drinks[i]
     })
     return totalDrinks
+}
+
+export const getTotalNumberFoods = (foods) => {
+    let totalFoods = 0
+    const arrayOfFoods = Object.keys(foods)
+    arrayOfFoods.forEach(i => {
+        totalFoods += foods[i]
+    })
+    return totalFoods
 }

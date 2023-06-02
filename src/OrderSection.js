@@ -3,28 +3,31 @@ import { formatUSD } from './Util/Money'
 import { OrderTable } from './OrderTable'
 import './OrderSection.scss'
 
-export const OrderSection = ({total, order}) => {
+export const OrderSection = ({drinksTotal, drinksOrder, foodsTotal, foodsOrder}) => {
   return (
     <div className='OrderSection'>
         <div className='OrderSection_Title'>
             Your Order
         </div>
         {
-            total > 0 && 
+            (drinksTotal > 0 || foodsTotal > 0) &&(
             <>
                 <strong>Drinks</strong>
-                <OrderTable completeOrder={order}/>
+                <OrderTable completeOrder={drinksOrder}/>
+
+                <strong>Foods</strong>
+                <OrderTable completeOrder={foodsOrder}/>
             </>
-        }
+        )}
         {
-            total === 0 && 
+            drinksTotal === 0 && foodsTotal === 0 &&
             <> 
                 Your cart is empty. 
             </>
         }
         <hr />
         <div className='OrderSection_Total'>
-            Total:<span>{ formatUSD(total)}</span>
+            Total:<span>{ formatUSD(drinksTotal + foodsTotal)}</span>
         </div>
     </div>
   )
