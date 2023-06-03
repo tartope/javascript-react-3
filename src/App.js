@@ -1,7 +1,7 @@
 import { Header } from './Header'
 import { Footer } from './Footer'
 import { Content } from './Content'
-import { orderedDrinks } from './Util/Atoms'
+import { orderedDesserts, orderedDrinks, orderedFoods } from './Util/Atoms'
 import { showSideDrawer } from './Util/Atoms'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { SidebarContent } from './SidebarContent'
@@ -19,6 +19,8 @@ function App() {
   let [showModal, setShowModal] = useState(false)
   let [showDessert, setShowDessert] = useState(false)
   const resetDrinkRecoilState = useResetRecoilState(orderedDrinks)
+  const resetFoodRecoilState = useResetRecoilState(orderedFoods)
+  const resetDessertRecoilState = useResetRecoilState(orderedDesserts)
   let [showTheSideDrawer, setShowSideDrawer] = useRecoilState(showSideDrawer)
 
   useEffect(() => {
@@ -62,6 +64,8 @@ function App() {
     })
     localStorageProxy.setOrders(orders)
     resetDrinkRecoilState()
+    resetFoodRecoilState()
+    resetDessertRecoilState()
     setShowModal(true)
   }
 

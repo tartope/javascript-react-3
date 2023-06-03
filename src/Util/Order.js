@@ -9,7 +9,7 @@
 //       altering the cost of the product.
 //
 
-import { getPriceForDrink, getPriceForFood } from './App.Config'
+import { getPriceForDrink, getPriceForFood, getPriceForDessert } from './App.Config'
 
 /**
  * @param {*} drinks 
@@ -79,6 +79,34 @@ export const buildFoodOrder = (foods) => {
     }
 }
 
+export const buildDessertOrder = (desserts) => {
+    let dessertsTotal = 0
+    let arrayOfDesserts = Object.keys(desserts)
+
+    const arrayOfDessertObjects = arrayOfDesserts.map(i => {
+        return {
+            item: i,
+            qty: desserts[i]
+        }
+    })
+
+    const allItems = arrayOfDessertObjects.map(i => {
+        dessertsTotal += i.qty * getPriceForDessert(i.item)
+        return {
+            ...i,
+            price: getPriceForDessert(i.item),
+            subTotal: i.qty * getPriceForDessert(i.item)
+        }
+    })
+
+    const dessertsOrder = allItems.filter(i => i.qty > 0)
+
+    return {
+        dessertsOrder,
+        dessertsTotal
+    }
+}
+
 /**
  * @param {*} orders 
  * @returns The total amount of all the orders.
@@ -107,4 +135,13 @@ export const getTotalNumberFoods = (foods) => {
         totalFoods += foods[i]
     })
     return totalFoods
+}
+
+export const getTotalNumberDesserts = (desserts) => {
+    let totalDesserts = 0
+    const arrayOfDesserts = Object.keys(desserts)
+    arrayOfDesserts.forEach(i => {
+        totalDesserts += desserts[i]
+    })
+    return totalDesserts
 }

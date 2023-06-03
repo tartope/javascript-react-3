@@ -47,7 +47,7 @@ export const foodPrices = [
     },
     {
         id: 4,
-        type: "jerk_chicken",
+        type: "jerk chicken",
         price: 4.00
     },
     {
@@ -58,10 +58,34 @@ export const foodPrices = [
 
 ]
 
+
+export const dessertPrices = [
+    { 
+        id: 1,
+        type: "ice cream",
+        price: 1.00 
+    },
+    { 
+        id: 2,
+        type: "apple pie",
+        price: 1.00 
+    },
+    { 
+        id: 3,
+        type: "chocolate cake",
+        price: 1.00 
+    }
+
+]
+
 export const getPriceForDrink = (type) => {
     return drinkPrices.find(p => p.type === type).price
 }
 
 export const getPriceForFood = (type) => {
     return foodPrices.find(p => p.type === type).price
+}
+
+export const getPriceForDessert = (type) => {
+    return dessertPrices.find(p => p.type === type).price
 }
